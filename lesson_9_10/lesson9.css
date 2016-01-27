@@ -1,0 +1,159 @@
+﻿/*------general------------------------------*/
+body {
+  padding:0;
+  margin:0;
+}
+.clearfix:after {
+  content:'';
+  display:block;
+  clear:both;
+  height:0px;
+  visibility:hidden
+}
+/*------Slider-----------------------------*/
+.box {
+  position:relative;
+  max-width:600px;
+  margin:0 auto;
+}
+.jcarousel {
+  position:relative;
+  overflow:hidden;
+}
+  .jcarousel ul {
+    position:relative;
+    width:3600px;
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .jcarousel ul li {
+    float: left;
+    text-align: center;
+    width:200px;
+}
+.jcarousel-prev,
+.jcarousel-next  {
+  position:absolute;
+  top:50%;
+  width:10px;
+  height:10px;
+  padding:5px;
+  border-radius:10px;
+  border:1px solid black;
+  text-decoration:none;
+  font-weight:bold;
+}
+.jcarousel-prev {
+  left:0;
+}
+.jcarousel-next {
+  right:0;
+}
+.jcarousel-pagination {
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+  .jcarousel-pagination a {
+    display:inline-block;
+    margin:0 0 0 5px;
+    width:10px;
+    height:10px;
+    border-radius:10px;
+    border:1px solid black;
+  }  
+  
+   .jcarousel-pagination a:hover {
+    background-color:black;
+  }
+.active {
+  background-color:red;
+}
+/*-----form----------------------------------*/
+.form1 {
+  padding:100px 0 0 0;
+}
+.checkBoxWrapper {
+  padding:15px 0;
+}
+.niceCheck {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  cursor: pointer;
+  background: url(checkbox-sprite.png);
+  overflow: hidden; 
+}
+.niceChecked {
+  background-position: 0 -17px;
+}
+.niceCheck input {
+  margin-left: -1000px; /* можно задать побольше чтобы наверняка скрыть поле */
+}
+.niceCheckDisabled {
+  margin-left:-100px;
+  background-image: url(checkbox-sprite.png);
+}
+/*--------menu----------------------*/
+.boxMenu {
+  padding:120px 0
+}
+.menuCss, .menu, .submenu, .submenu2 {
+  padding:0;
+  margin:0;
+  list-style:none
+}
+  .menuCss li, .menu li {
+    float:left;
+    position:relative;
+    border:1px solid black;
+  }
+  .menuCss li a, .menu li a {
+    display:block;
+    padding: 5px 20px;
+    color:black;
+    text-decoration:none;
+  }
+
+  .menuCss li a:hover, .menu li a:hover {
+    background-color:lightgray;
+  } 
+  
+.submenu, .submenu2 {
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  width:120px;
+  border:1px solid black;
+}
+  .submenu li, .submenu2 li {
+    float:none;
+    border:none;
+  }
+  .submenu li a:hover,
+  .submenu2 li a:hover {
+    background-color:lightgray;
+  }
+  
+  /*menuCSS*/
+  .menuCss li:hover .submenu,
+  .menuCss .submenu li:hover .subsubmenu  {
+    display:block;
+  }
+
+.subsubmenu, .subsubmenu2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin:0;
+  padding:0;
+  width: 120px;
+  border: 1px solid black;
+  list-style: none;
+}
+.activeMenu {
+  display:block;
+}

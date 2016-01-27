@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>lesson 7-8</title>
+  <link href="test2.css" type="text/css" rel="stylesheet"/>
+  <script src="jquery-1.11.3.min.js"></script>
+  <script src="JavaScript.js"></script>
+</head>
+<body>   
+  <div class="pages">
+    <ul class="tab clearfix">
+      <li class="active"><a href="#">Tab 1</a></li>
+      <li><a href="#">Tab 2</a></li>
+      <li><a href="#">Tab 3</a></li>
+    </ul>
+    <div class="pagesBox">
+      <div class="page">
+        <p>Page 1</p>
+        <form name="form3" action="#" method="get">
+          <fieldset>
+            <legend>Contact information</legend>
+            <div>
+              <label for="firstName" class="fieldName">First name</label>
+              <span data-title="Enter your first name"><input type="text" name="firstName" id="firstName"/></span>
+            </div>
+            <div>
+              <label for="secondName" class="fieldName">Second name</label>
+              <span data-title="Enter your second name"><input type="text" name="secondName" id="secondName"/></span>
+            </div>
+            <div>
+              <label for="address" class="fieldName">Address</label>
+              <span data-title="Enter your address"><input type="text" name="address" id="address"/></span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="page" style="display:none">Page 2</div>
+      <div class="page" style="display:none">Page 3</div>
+    </div>
+  </div>
+  <script src="JavaScript2.js"></script>  
+</body>
+</html>

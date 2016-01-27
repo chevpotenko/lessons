@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Lesson 13-14</title>
+  <link href="test.css" rel="stylesheet" />
+  <script src="jquery-1.11.3.min.js"></script>
+  <script src="template.js"></script>
+  <script src="JavaScript.js"></script>  
+</head>
+<body>
+  <div class="box">
+    <h1>Тест по программированию</h1>
+    <form name="form1" action="#" method="post">
+      <ol class="surveyList">
+        <script type="text/tmpl" id="template">
+          <% var j=0; for(var i=0; i<data.length; ++i){ %>
+          <li><%= data[i].question %>
+            <ul>
+              <li>
+                <input type="checkbox" name="item<%= ++j %>" value="i<%= j %>" id="item<%= j %>"/>
+                <label for="item<%= j++ %>"><%= data[i].variant1 %></label>
+              </li>              
+              <li>
+                <input type="checkbox" name="item<%= j %>" value="i<%= j %>" id="item<%= j %>"/>
+                <label for="item<%= j++ %>"><%= data[i].variant2 %></label>
+              </li>
+              <li>
+                <input type="checkbox" name="item<%= j %>" value="i<%= j %>" id="item<%= j %>"/>
+                <label for="item<%= j %>"><%= data[i].variant3 %></label>
+              </li>
+            </ul>
+          </li>
+          <% } %>
+        </script>
+      </ol>
+      <button>Проверить мои результаты</button>     
+    </form>
+  </div>
+</body>
+</html>

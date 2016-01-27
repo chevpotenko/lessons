@@ -1,0 +1,50 @@
+﻿body {
+}
+h2 {
+  text-align:center;
+  margin-top:50px;
+}
+.clearfix:after {
+  content:'';
+  display:block;
+  clear:both;
+  visibility:hidden;
+  height:0px;
+}
+.carousel-hider {
+  float:left;
+  width:602px;
+  overflow:hidden;
+}
+.carousel-list {
+  position:relative;
+  margin:0;
+  padding:0;
+  list-style:none;
+  width:10000px;
+}
+.carousel-element {
+  display:block;
+  float:left;
+  width:100px;
+  margin-right:25px;
+  text-align:center;
+}
+.carousel-arrow-left, .carousel-arrow-right {
+  float:left;
+  border:1px solid grey;
+  background-color:lightgrey;
+  padding:5px;
+  margin-top:50px;
+}
+.carousel-arrow-left {
+  margin-right:25px;
+}
+.carousel-arrow-right {
+  margin-left:25px;
+}
+
+  .carousel-arrow-left:hover, .carousel-arrow-right:hover {
+    cursor:pointer;
+    background-color:gray;
+  } 

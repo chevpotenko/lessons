@@ -1,0 +1,27 @@
+﻿body {
+  padding:0;
+  margin:0;
+}
+h1 {
+  text-align:center;
+}
+.box {
+  width: 500px;
+  margin: 0 auto;
+}
+form {
+  text-align: center;
+}
+ol {
+  margin: 0;
+  padding: 0 0 15px 0;
+  text-align: left;
+}
+ul {
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+}
+  ul li {
+    padding: 5px;
+  }
