@@ -1,12 +1,11 @@
 ﻿$(function () {
 
   //pageControl
-
   $('.tab li').on("click", function () {
     $('.tab li').removeClass('active');
-    $('.pagesBox .page').css('display','none')
-    $(this).addClass('active'); 
-    $('.pagesBox .page:eq(' + $(this).index() + ')').css('display', 'block');  
+    $(this).addClass('active');
+    $('.pagesBox .page').hide();
+    $('.pagesBox .page:eq(' + $(this).index() + ')').show();  
   })
 
   //tooltip

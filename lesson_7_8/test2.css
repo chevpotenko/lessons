@@ -1,5 +1,4 @@
-﻿/*Lesson7-8*/
-/*------general-------------------------*/
+﻿/*------general-------------------------*/
 body {
   padding:15px;
   margin:0;
@@ -12,7 +11,6 @@ body {
   visibility:hidden
 }
 /*------pageControl-------------------*/
-
 .pages {
   width:500px;
   height:350px;
@@ -37,21 +35,21 @@ body {
   border-top-right-radius:5px;
   background-color:lightgray;
 }
-  .tab li a {
-    display:block;
-    padding: 5px 15px;
-    margin:0;
-    color:black;
-    text-decoration:none;
-  }
-   .tab li.active{
-    border-bottom: 1px solid white;
-    background-color: white;
-  }
-  .tab li:hover {
-    border: 1px solid black;
-    border-bottom: 1px solid white;
-  }
+.tab li a {
+  display:block;
+  padding: 5px 15px;
+  margin:0;
+  color:black;
+  text-decoration:none;
+}
+  .tab li.active{
+  border-bottom: 1px solid white;
+  background-color: white;
+}
+.tab li:hover {
+  border: 1px solid black;
+  border-bottom: 1px solid white;
+}
 .pagesBox {
   padding:10px;
 }
