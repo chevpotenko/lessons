@@ -1,0 +1,14 @@
+﻿form {
+  margin-bottom:50px;
+}
+div {
+  margin-bottom:50px;
+}
+.timer {
+  font-size: 70px;
+  border: none;
+}
+input[type="button"] {
+  width: 70px;
+  margin-left:50px;
+}
