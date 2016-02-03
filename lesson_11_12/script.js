@@ -1,9 +1,8 @@
 ﻿$(function () {
-
   var users = [
     {
       name: 'Oleg',
-      experience:1
+      experience: 1
     },
     {
       name: 'Ivan',
@@ -21,15 +20,8 @@
       name: 'Marat',
       experience: 5
     },
-
-  ]
-  
-
+  ];
   var html = $('#test_tmpl').html();
-
-  var content = tmpl(html, {data:users})
-
+  var content = tmpl(html, { data: users });
   $('.box-tmpl').append(content);
-
-
 })

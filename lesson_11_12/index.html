@@ -5,90 +5,96 @@
   <title>Lesson 11-12</title>
   <link href="carousel.css" rel="stylesheet" />
   <script src="jquery-1.11.3.min.js"></script>
-  <script src="jquery.carousel.js"></script> 
   <script src="template.js"></script>
+  <script src="jquery.carousel.js"></script>  
   <script src="script.js"></script>
 </head>
 <body>
+  <div class="wrapper">
 
-  <!-- begin carousel-1 -->
+    <!-- begin carousel-1 -->
 
-  <h2>Carousel 1</h2>   
-  <div class="carousel clearfix">    
-    <div class="carousel-hider">
-      <ul class="carousel-list clearfix">
-        <li class="carousel-element"><p>Description 1</p></li>
-        <li class="carousel-element"><p>Description 2</p></li>
-        <li class="carousel-element"><p>Description 3</p></li>
-        <li class="carousel-element"><p>Description 4</p></li>
-        <li class="carousel-element"><p>Description 5</p></li>
-        <li class="carousel-element"><p>Description 6</p></li>
-        <li class="carousel-element"><p>Description 7</p></li>
-        <li class="carousel-element"><p>Description 8</p></li>
-        <li class="carousel-element"><p>Description 9</p></li>
-        <li class="carousel-element"><p>Description 10</p></li>
-        <li class="carousel-element"><p>Description 11</p></li>
-        <li class="carousel-element"><p>Description 12</p></li>
-      </ul> 
-    </div>   
-  </div>
-  <script>
-    $(function () {
-      $('.carousel').carousel({
-        elemPerFrame: 3,
-        widthElem: 200,
-        marginRightElem: 25
+    <h2>Carousel 1</h2>   
+    <div class="carousel carousel-1 clearfix">    
+      <div class="carousel-hider">
+        <ul class="carousel-list clearfix">
+          <li><p>Description 1</p></li>
+          <li><p>Description 2</p></li>
+          <li><p>Description 3</p></li>
+          <li><p>Description 4</p></li>
+          <li><p>Description 5</p></li>
+          <li><p>Description 6</p></li>
+          <li><p>Description 7</p></li>
+          <li><p>Description 8</p></li>
+          <li><p>Description 9</p></li>
+          <li><p>Description 10</p></li>
+          <li><p>Description 11</p></li>
+          <li><p>Description 12</p></li>
+        </ul> 
+      </div>   
+    </div>
+    <script>
+      $(function () {
+        $('.carousel-1').carousel({
+          elemPerFrame: 3,
+          widthElem: 200,
+          marginRightElem: 25
+        })
       })
-    })
-  </script>
-  
-  <!-- end carousel-1 -->
-  <!-- begin carousel-2 -->
-  
-  <h2>Carousel 2</h2>      
-  <div class="carousel-2 clearfix">    
-    <div class="carousel-hider">
-      <ul class="carousel-list clearfix">
-        <li class="carousel-element"><p>Description 1</p></li>
-        <li class="carousel-element"><p>Description 2</p></li>
-        <li class="carousel-element"><p>Description 3</p></li>
-        <li class="carousel-element"><p>Description 4</p></li>
-        <li class="carousel-element"><p>Description 5</p></li>
-        <li class="carousel-element"><p>Description 6</p></li>
-        <li class="carousel-element"><p>Description 7</p></li>
-        <li class="carousel-element"><p>Description 8</p></li>
-        <li class="carousel-element"><p>Description 9</p></li>
-        <li class="carousel-element"><p>Description 10</p></li>
-        <li class="carousel-element"><p>Description 11</p></li>
-        <li class="carousel-element"><p>Description 12</p></li>
-      </ul> 
-    </div>   
-  </div>
-  <script>
-    $(function () {
-      $('.carousel-2').carousel({
-        elemPerFrame: 2,
-        widthElem: 300,
-        marginRightElem: 25
-      })
-    })
-  </script>
-
-  <!-- end carousel-2 -->
-  <div class="box-tmpl">
-    <h2>Template</h2>
-    <script type="text/tmpl" id="test_tmpl">      
-      <div style="margin-top:50px">
-        <h3>User experience</h3>
-        <dl>
-          <% for(var i=0; i<data.length; ++i){ %>
-            <dt><%= data[i].name %></dt>
-              <dd><%= data[i].experience %> years</dd>
-          <% } %>
-        </dl>      
-      </div>     
     </script>
-  </div>  
+  
+    <!-- end carousel-1 -->
+    <!-- begin carousel-2 -->
+  
+    <h2>Carousel 2</h2>      
+    <div class="carousel carousel-2 clearfix">    
+      <div class="carousel-hider">
+        <ul class="carousel-list clearfix">
+          <li><p>Description 1</p></li>
+          <li><p>Description 2</p></li>
+          <li><p>Description 3</p></li>
+          <li><p>Description 4</p></li>
+          <li><p>Description 5</p></li>
+          <li><p>Description 6</p></li>
+          <li><p>Description 7</p></li>
+          <li><p>Description 8</p></li>
+          <li><p>Description 9</p></li>
+          <li><p>Description 10</p></li>
+          <li><p>Description 11</p></li>
+          <li><p>Description 12</p></li>
+        </ul> 
+      </div>   
+    </div>
+    <script>
+      $(function () {
+        $('.carousel-2').carousel({
+          elemPerFrame: 2,
+          widthElem: 300,
+          marginRightElem: 25
+        })
+      })
+    </script>
 
+    <!-- end carousel-2 -->
+    <!-- begin template -->
+
+    <div class="box-tmpl">
+      <h2>Template</h2>
+      <script type="text/tmpl" id="test_tmpl">      
+        <div style="margin-top:50px">
+          <h3>User experience</h3>
+          <dl>
+            <% for(var i=0; i<data.length; ++i){ %>
+              <dt><%= data[i].name %></dt>
+                <dd><%= data[i].experience %> years</dd>
+            <% } %>
+          </dl>      
+        </div>     
+      </script>
+    </div>
+
+    <!-- end template -->
+
+  </div>
 </body>
 </html>

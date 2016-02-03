@@ -1,4 +1,11 @@
-﻿body {
+﻿/*-------0.general-----------------------------------------*/
+body {
+  padding:0;
+  margin:0;
+}
+.wrapper {
+  width:825px;
+  margin:0 auto;
 }
 h2 {
   text-align:center;
@@ -11,10 +18,14 @@ h2 {
   visibility:hidden;
   height:0px;
 }
-.carousel-hider {
-  float:left;
+/*---------1.carousel general--------------------------------*/
+.carousel {
+  position:relative;
+}
+.carousel-hider { 
   width:602px;
   overflow:hidden;
+  margin:0 auto;
 }
 .carousel-list {
   position:relative;
@@ -23,28 +34,40 @@ h2 {
   list-style:none;
   width:10000px;
 }
-.carousel-element {
-  display:block;
-  float:left;
-  width:100px;
-  margin-right:25px;
-  text-align:center;
-}
-.carousel-arrow-left, .carousel-arrow-right {
-  float:left;
+.carousel-arrow-left,
+.carousel-arrow-right {
+  position:absolute;
+  top:10px;
+  padding:5px;   
   border:1px solid grey;
-  background-color:lightgrey;
-  padding:5px;
-  margin-top:50px;
+  background-color:lightgrey;   
 }
+.carousel-arrow-left:hover,
+.carousel-arrow-right:hover {
+  cursor:pointer;
+  background-color:gray;
+} 
 .carousel-arrow-left {
-  margin-right:25px;
+  left:0;  
 }
 .carousel-arrow-right {
-  margin-left:25px;
+  right:0; 
 }
-
-  .carousel-arrow-left:hover, .carousel-arrow-right:hover {
-    cursor:pointer;
-    background-color:gray;
-  } 
+/*------2.carousel-1---------------------------------------*/
+.carousel-1 li{
+  display:block;
+  float:left;
+  width:200px;
+  margin-right:25px;
+  text-align:center;
+  border:solid 1px black;
+}
+/*------3.carousel-2---------------------------------------*/
+.carousel-2 li{
+  display:block;
+  float:left;
+  width:300px;
+  margin-right:25px;
+  text-align:center;
+  border:solid 1px black;
+}
