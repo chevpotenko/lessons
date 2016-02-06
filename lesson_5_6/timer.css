@@ -1,5 +1,9 @@
-﻿form {
-  margin-bottom:50px;
+﻿.box {
+  max-width:450px;
+  margin: 0 auto;
+}
+form {
+  margin:25px 0;
 }
 div {
   margin-bottom:50px;
@@ -7,6 +11,9 @@ div {
 .timer {
   font-size: 70px;
   border: none;
+}
+input[type="text"] {
+  width:100%;
 }
 input[type="button"] {
   width: 70px;

@@ -7,32 +7,35 @@
   <script src="timer.js"></script>  
 </head>
 <body>
+  <div class="box">
 
-  <!-- timer1 -->
+    <!-- timer1 -->
 
-  <form name="form1">
-    <div>
-      <input type="text" name="timer" value="0:0:0:000" class="timer" id="timer1"/>
-    </div>
-    <input type="button" name="start" value="Start" id="start1"/>
-    <input type="button" name="clear" value="Clear" id="clear1" />
-  </form>  
-  <script>
-    var timer1 = new Timer('timer1', 'start1', 'clear1'); 
-  </script>
+    <form name="form1">
+      <div>
+        <input type="text" name="timer" value="0:0:0:000" class="timer" id="timer1"/>
+      </div>
+      <input type="button" name="start" value="Start" id="start1"/>
+      <input type="button" name="clear" value="Clear" id="clear1" />
+    </form>  
+    <script>
+      var timer1 = new Timer('timer1', 'start1', 'clear1'); 
+    </script>
 
-  <!-- timer2 -->
+    <!-- timer2 -->
 
-  <form name="form2">
-    <div>
-      <input type="text" name="timer" value="0:0:0:000" class="timer" id="timer2"/>
-    </div>
-    <input type="button" name="start" value="Start" id="start2"/>
-    <input type="button" name="clear" value="Clear" id="clear2" />
-  </form>
-  <script>
-    var timer2 = new Timer('timer2', 'start2', 'clear2');
-  </script>
+    <form name="form2">
+      <div>
+        <input type="text" name="timer" value="0:0:0:000" class="timer" id="timer2"/>
+      </div>
+      <input type="button" name="start" value="Start" id="start2"/>
+      <input type="button" name="clear" value="Clear" id="clear2" />
+    </form>
+    <script>
+      var timer2 = new Timer('timer2', 'start2', 'clear2');
+    </script>
+
+  </div>
 
 </body>
 </html>
