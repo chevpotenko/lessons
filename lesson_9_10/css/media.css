@@ -1,0 +1,38 @@
+﻿@media screen and (max-width: 570px) {
+  /*FORM*/
+  .formContent {
+    margin-bottom:0;
+  }
+  .form-part {
+    float:none;
+    padding-bottom:70px;
+  }
+  /*MENU*/
+  .boxMenu {
+    padding:0;
+  }
+  .menu {
+    list-style-type: decimal;
+  }
+  .menu li {
+    float:none;
+    border:none;
+  }
+  .menu li a {
+    padding:5px 5px;
+  }
+  /*submenu*/
+  .submenu,
+  .subsubmenu {
+    display:block;
+    position:static;
+    padding:10px 0 10px 30px;
+    border:none;    
+  }
+  .submenu {
+    list-style-type:circle;
+  }
+  .subsubmenu {
+    list-style-type:disc;    
+  }
+}
