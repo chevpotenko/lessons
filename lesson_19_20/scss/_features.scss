@@ -1,0 +1,97 @@
+/*------------4.features-------------------------*/
+.wrFeatures{
+	padding:76px 0 83px 0;
+	background-color:#fff;
+}
+
+
+
+.feature{
+	position:relative;
+	float:left;
+	width:31%;
+}
+.feature--tab{
+	margin:0 3% 0 4%; 
+}
+.feature-number{
+	float:left;
+	width:30%;
+	font:90px 'Ubuntu', sans-serif;
+	line-height:0.7;
+	color:#8a8a8a;
+}
+.feature-content{
+	margin-left:33%;
+	padding-top:42px;
+	
+	h3{
+	margin:0;
+	padding:0 0 25px 0;
+	font:20px 'Ubuntu', sans-serif;
+	color:#2a2b2e;
+	}
+	
+	p{
+	padding:0 0 12px 0;
+	margin:0;
+	font:13px Arial;
+	color:#8a8a8a;
+	}
+}
+
+
+
+.iconFeature{
+	content:'';
+	display:block;
+	position:absolute;
+	left:35%;
+	top:0;
+	width:32px;
+	height:32px;
+}
+.feature-content--part1:after{
+	@extend .iconFeature;
+	background:url(../img/sprite.png) 0 -92px no-repeat;
+}
+.feature-content--part2:after{
+	@extend .iconFeature;
+	background:url(../img/sprite.png) 0 -140px no-repeat;
+}
+.feature-content--part3:after{
+	@extend .iconFeature;
+	background:url(../img/sprite.png) 0 -186px no-repeat;
+}
+
+
+
+	
+.arrow{
+	font:13px 'Ubuntu', sans-serif;
+	text-decoration:none;
+	color:#2a2b2e;
+	
+	&:after{
+	content:'';
+	display:inline-block;
+	width:10px;
+	height:9px;
+	margin-left:20px;
+	background-image:url(../img/sprite.png);
+	background-position:0 -60px;
+	}
+	
+	&:hover{
+	color:#248cec;
+	
+		&:after{
+		content:'';
+		display:inline-block;
+		width:10px;
+		height:9px;
+		margin-left:20px;
+		background-position:0 -74px;
+		}
+	}
+}

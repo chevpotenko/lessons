@@ -1,0 +1,70 @@
+/*------------3.main theme-------------------------*/
+.wrMainTheme{
+	position:relative;
+	padding:37px 0 0 0;
+	background-color:#fff;
+}
+
+
+
+.mainTheme{
+	position:relative;
+	overflow:hidden;
+}
+.theme{
+	position:relative;
+	width:10000px;
+	margin:0;
+	padding:0;
+	list-style:none;
+	
+	li{
+		position:relative;
+		float:left;
+		display:block;
+	}
+	
+	img{
+		width:100%;
+	}
+}
+.jcarousel-pagination{
+	position:absolute;
+	width:auto;
+	height:20px;
+	bottom:15px;
+	left:48%;
+	
+	a{
+		display:inline-block;
+		width:9px;
+		height:9px;
+		margin-left:15px;
+		border:3px solid #fff;
+		background-color:#fff;
+	}
+}
+a.activeTheme{
+	background-color:#000;
+}
+
+
+
+.theme-label{
+	position:absolute;
+	left:36px;
+	bottom:44px;
+	width:261px;
+	margin:0;
+	padding:16px 23px;		
+	background: url(../img/title.png) repeat;
+		
+	a{
+		text-decoration:none;
+		font: 54px/54px 'Ubuntu', sans-serif;
+		color:#fff;
+	}
+	span{
+		color:#f4b60d;
+	}
+}	

@@ -1,0 +1,47 @@
+/*------------9.footer-------------------------*/
+.wrMainFooter{
+	padding:22px 0;
+	background-color:#35383c;
+	font-size:12px;
+}
+
+.contacts{
+	margin:0;
+	padding:0;
+	list-style:none;
+	
+	li{
+		display:inline-block;		
+		margin-right:36px;
+		color:white;
+	}
+}
+
+
+
+.iconFooter{
+	content:'';
+	display:inline-block;
+	width:16px;
+	height:16px;
+	margin-right:10px;
+	vertical-align:middle;
+}
+.location:before{
+	@extend	.iconFooter;
+	background:url(../img/sprite.png) 0 0 no-repeat
+}
+.phone:before{	
+	@extend	.iconFooter;
+	background:url(../img/sprite.png) 0 -21px no-repeat
+}
+.email:before{
+	@extend	.iconFooter;
+	background:url(../img/sprite.png) 0 -43px no-repeat
+}
+
+
+
+.copyright{
+	float:right;
+}

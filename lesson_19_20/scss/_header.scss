@@ -1,0 +1,90 @@
+/*------------1.header-------------------------*/
+.wrMainHeader{
+	padding:24px 0;
+}
+
+
+.logo{
+	position:relative;
+	float:left;
+	width:30%;
+	margin: 0;
+	padding:0;	
+}
+.logo-label{
+	display:block;
+	padding:0 0 0 13%;
+	background: url(../img/logo.jpg) no-repeat;
+	font-family:'Ubuntu', sans-serif;
+	text-decoration:none;
+	color:#434343;
+	
+	&:hover{
+		color:gray;
+	}	
+}
+.logo-label-text1{
+	font-size:30px;
+	line-height:26px;	
+	font-weight:500;
+}
+.logo-label-text2{
+	font-size:12px;	
+	font-weight:300;
+	letter-spacing:3px
+}
+
+
+
+.socialNet{
+	float:right;
+	margin-top:13px;
+	padding:0;
+	list-style:none;
+	
+	li{
+		display:inline-block;
+		margin: 0 0 0 10px;
+	}
+	
+	a{
+		display:inline-block;
+		width:19px;
+		height:19px;
+		background-image: url(../img/icon_soc.png);
+		background-repeat: no-repeat;
+	}
+}
+
+
+
+.facebook{
+	background-position:0 -20px;
+	&:hover{
+	background-position:0 -1px;
+	}
+}
+.twitter{
+	background-position: -31px -20px;
+	&:hover{
+	background-position: -31px -1px;
+	}
+}
+.rss{
+	background-position: -64px -20px;
+	&:hover{
+	background-position:-64px -1px;
+	}
+}
+.linkedin{
+	background-position: -97px -20px;
+	&:hover{
+	background-position:-97px -1px;
+	}
+}
+.skype{
+	background-position: -130px -20px;
+	&:hover{
+	background-position: -130px -1px;
+	}
+}

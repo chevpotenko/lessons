@@ -1,0 +1,129 @@
+/*------------6.info-------------------------*/
+.wrInfo{
+	padding:63px 0 47px 0;
+	background-color: #f7f7f7;
+}
+
+
+.info{
+	font-size:13px;
+	line-height:20px;
+	color:#8a8a8a;
+}
+.info-category{
+	float:left;
+	width:50%;
+	
+	h2{
+		margin:0;
+		padding-bottom:45px;
+		font:24px 'Ubuntu', sans-serif;;
+		color:#2a2d32;
+	}
+}
+.info-category--tab{
+	margin-left:2%;
+	width:48%
+}
+
+
+
+
+.news{
+	padding: 0 20px 27px 0;
+}
+.news-img{
+	position:relative;
+	float:left;
+	width:27%;
+	
+	img{
+		width:100%;
+	}
+}
+.news-day{
+	position:absolute;
+	left:-15px;
+	top:10px;
+	width:41px;
+	height:41px;
+	padding-top:41px;
+	background-color:#f4b60d;
+	font:18px 'Ubuntu', sans-serif;;
+	text-align:center;
+	line-height:41px;
+	color:#000;
+}
+.news-month{
+	position:absolute;
+	top:0;
+	left:0;
+	width:41px;
+	height:41px;
+	background-color:#248cec;
+	color:#fff;
+	text-align:center;
+	line-height:41px;
+}
+.news-text{
+	margin-left:32%;
+	
+	h3{
+		margin:0;
+	}
+}
+.news-link{
+	font:16px 'Ubuntu', sans-serif;;
+	color:#2a2d32;
+	text-decoration: none;
+	
+	&:hover{
+		color:#0187f4;
+	}
+}
+.news-details{
+	margin:0;
+	padding:4px 0;
+	
+	span{
+		color:#0187f4;
+	}
+}
+
+
+
+
+.banner-header{
+	position:relative;
+	margin:0 0 5px 0;
+	padding: 10px 15px 10px 52px;
+	background-color:#fff;
+	border:1px solid #f6f6f6;
+	cursor:pointer;
+	font: 13px 'Ubuntu', sans-serif;
+	font-weight:500;
+	text-transform:uppercase;
+	color:#2a2d32;
+
+	&:focus{
+		outline:none;
+	}
+}
+.banner-activeHeader{
+	background-color:#f4b60d;
+	border:1px solid #f4b60d;
+	color:#fff;
+}
+.banner-marker{
+	position:absolute;
+	left:0;
+	top:0;
+	width:34px;
+	height:100%;
+	border-right:1px solid #f6f6f6;
+	text-align:center;
+	line-height:34px;
+}
+.banner-content{
+	padding:8px 0 8px 45px;
+}
