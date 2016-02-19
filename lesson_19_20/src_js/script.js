@@ -39,5 +39,4 @@
 			} 
 		}
 	 );
-	// $( ".banner" ).accordion( "option", "icons", { "header": "icon-accordion", "activeHeader": "icon-accordion-active" } );
 })
