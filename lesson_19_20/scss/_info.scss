@@ -114,16 +114,29 @@
 	border:1px solid #f4b60d;
 	color:#fff;
 }
-.banner-marker{
-	position:absolute;
-	left:0;
-	top:0;
-	width:34px;
-	height:100%;
-	border-right:1px solid #f6f6f6;
-	text-align:center;
-	line-height:34px;
-}
 .banner-content{
 	padding:8px 0 8px 45px;
+}
+
+
+
+
+
+.ui-icon {
+	display: block;
+	height:34px;
+	width:34px;
+}
+.ui-accordion-header-icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin:0;
+	padding:0;
+}
+.icon-accordion{
+	background:url(../img/icon_accordion.png) 0 0 no-repeat;
+}
+.icon-accordion-active{
+	background:url(../img/icon_accordion.png) -34px 0 no-repeat;
 }

@@ -24,23 +24,20 @@
 		.on('click', function (e) { e.preventDefault() });
 
 	/*accordion------------------------------------------------------------------------------*/
-
+	
 	$(".banner").accordion(
 		{ 
+			icons: { "header": "icon-accordion", "activeHeader": "icon-accordion-active" },
 			heightStyle: "content",
 			beforeActivate: function (click,ui) {
 				var active = ui.newHeader.index('.banner-header');
 				$('.banner-header')
-				.removeClass('banner-activeHeader')
-				.children('.banner-marker')
-				.html('+');
+				.removeClass('banner-activeHeader');
 				$('.banner-header')
 				.eq(active)
-				.addClass('banner-activeHeader')
-				.children('.banner-marker')
-				.html('-');
+				.addClass('banner-activeHeader');
 			} 
 		}
 	 );
-	 
+	// $( ".banner" ).accordion( "option", "icons", { "header": "icon-accordion", "activeHeader": "icon-accordion-active" } );
 })

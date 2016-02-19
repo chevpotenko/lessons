@@ -48,11 +48,13 @@ input:focus {
     color: gray; }
 
 .logo-label-text1 {
+  display: block;
   font-size: 30px;
   line-height: 26px;
   font-weight: 500; }
 
 .logo-label-text2 {
+  display: block;
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 3px; }
@@ -421,18 +423,26 @@ a.activeTheme {
   border: 1px solid #f4b60d;
   color: #fff; }
 
-.banner-marker {
+.banner-content {
+  padding: 8px 0 8px 45px; }
+
+.ui-icon {
+  display: block;
+  height: 34px;
+  width: 34px; }
+
+.ui-accordion-header-icon {
   position: absolute;
   left: 0;
   top: 0;
-  width: 34px;
-  height: 100%;
-  border-right: 1px solid #f6f6f6;
-  text-align: center;
-  line-height: 34px; }
+  margin: 0;
+  padding: 0; }
 
-.banner-content {
-  padding: 8px 0 8px 45px; }
+.icon-accordion {
+  background: url(../img/icon_accordion.png) 0 0 no-repeat; }
+
+.icon-accordion-active {
+  background: url(../img/icon_accordion.png) -34px 0 no-repeat; }
 
 /*------------7.companies-------------------------*/
 .wrCompanies {
