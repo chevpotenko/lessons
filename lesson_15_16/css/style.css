@@ -1,0 +1,164 @@
+﻿/*-------------0. GENERAL--------------------------*/
+html, body {
+  padding: 0;
+  margin: 0;
+}
+.googleQuery {
+  font: 13px Arial;
+}
+input:focus {
+  outline:none;   
+}
+.clearfix:after {
+  content:'';
+  display:block;
+  clear:both;
+  visibility:hidden;
+  height:0;
+}
+/*-------------1. FORM------------------------------*/
+/*---------------1.1 form front page-----------------*/
+.formQuery {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  height: 40px;
+  width: 672px;
+  margin: -80px 0 0 -336px;
+  padding: 120px 0 0 0;
+  background: url(../img/label.png) center top no-repeat white;
+}
+.form {
+  position: relative; 
+  padding:0 12px; 
+  background-color:white;
+  border: 1px solid rgb(185, 185, 185);
+}
+.query {
+  display: block;
+  width: 100%;
+  height: 12px;
+  padding: 12px 0;
+  border: none;
+  background-image: url(../img/icon.png);
+  background-position: 99% center;
+  background-repeat: no-repeat;
+  background-color:white;
+}
+.do {  
+  position: absolute;
+  right: 50%;
+  bottom: -200%;
+  margin: 0 -65px 0 0;
+  padding: 10px 16px;
+  border:1px solid #f1f1f1;
+  border-radius:2px;
+  background-color: #f1f1f1;
+  font-size:13px;
+  font-weight:bold;
+  color:#757575;
+  cursor: pointer;
+}
+.do:hover {
+  border:1px solid #c6c6c6;
+  background-color: #f8f8f8;
+}
+.activeInput {
+  border: 1px solid #4d90fe;
+}
+/*---------------1.2. form back page-----------------*/
+.formQuery--replace {
+  position:static;
+  top:0;
+  left:0;
+  width:auto;
+  margin:0; 
+  padding:15px 0 15px 128px;
+  background:url(../img/label_small.png) 15px center no-repeat #f1f1f1;
+}
+.formQuery--replace .form{
+  width:40%;
+}
+.formQuery--replace .query{
+  background-image:none;  
+}
+.formQuery--replace .do { 
+  right: 0;
+  bottom: 0;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius:0;
+  background: url(../img/icon_search.png) center center no-repeat #4285f4;   
+}
+.formQuery--replace .do:hover { 
+  background-color: #3b78e7;  
+}
+/*-------------2. Menu-----------------------------*/
+.menu,
+.listResult {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.menu,
+.amount,
+.keyWords,
+.listResult {
+  padding-left: 128px;
+}
+.menu{  
+  border-bottom:1px solid #ececec;
+  border-top:1px solid #ececec;
+}
+.menu li {
+  float: left;
+  padding: 15px 10px 12px 10px;
+  margin-right: 25px;  
+  color: #545454;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+.menu li:hover  {
+  border-bottom: 3px solid #4285f4;
+  color: #4285f4;
+}
+li.itemEmuActive {
+  border-bottom: 3px solid #4285f4;
+  color: #4285f4;
+}
+/*--------------3. Result---------------------*/
+.listResult {  
+   width:35%;   
+}
+.listResult li {
+  padding:5px 0; 
+}
+.listResult h3,
+.textUrl,
+.brief {
+  margin: 0;
+  padding: 2px 0;
+}
+.link {
+  font-size:16px;
+  color: #1a0dab;
+  text-decoration:none;
+}
+.link:hover {
+  text-decoration:underline;
+}
+.textUrl {
+  font-size:14px;
+  color:#006621;
+  word-wrap:break-word;
+}
+.brief {  
+  line-height:1.4;
+  color: #545454;
+}
+.hide {
+  display:none;
+}

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>Lesson 15-16</title>
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>      
+  <div id="googleQuery" class="googleQuery">
+    <!-- begin Form -->
+
+    <div class="formQuery">
+      <form class="form">       
+        <input class="query" type="text" name="query" value="" placeholder="Введите поисковый запрос или URL" autocomplete="off"/>        
+        <input class="do" type="submit" value="Поиск в Google"/>       
+      </form>
+    </div>
+
+    <!-- end Form -->
+    <!-- begin Menu -->
+
+    <ul class="menu hide clearfix">
+      <li class="itemEmuActive">Все</li>
+      <li>Картинки</li>
+      <li>Видео</li>
+      <li>Карты</li>
+      <li>Новости</li>
+      <li>Ещё</li>
+      <li>Инструменты поиска</li>
+    </ul>
+
+    <!-- end Menu -->
+    <!-- begin Result -->
+
+    <div class="result hide">               
+      <p class="amount">Результатов: <span id="amountResults"></span></p>
+      <p class="keyWords">Показаны результаты по запросу <em><b id="textQuery"></b></em></p>
+      <ul class="listResult"></ul>            
+    </div>
+    
+    <!-- end Result  -->
+    <!-- begin Template -->
+
+    <script id="text_tmpl" type="text/tmpl">                 
+      <% for(var i=0; i<data.length; ++i){ %>
+        <li>
+          <h3><a class="link" href="<%= data[i].url %>"><%= data[i].title %></a></h3>          
+          <p class="textUrl"><%= data[i].url %></p>
+          <p class="brief"><%= data[i].content %></p>
+        </li>
+      <% } %>
+    </script>    
+    <!-- end template -->    
+  </div>  
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/jquery.googleQuery.js"></script>  
+  <script src="js/script.js"></script>
+</body>
+</html>
