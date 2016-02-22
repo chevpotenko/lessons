@@ -31,20 +31,16 @@ body {
 }
 .tab li {
   float:left;
-  margin-right:3px;
-  margin-bottom:-1px;  
+	display:block;
+  padding: 5px 15px;
+  margin: 0 3px -1px 0; 
   border:1px solid lightgray;
   border-bottom:1px solid black;
   border-top-left-radius:5px;
   border-top-right-radius:5px;
   background-color:lightgray;
-}
-.tab li a {
-  display:block;
-  padding: 5px 15px;
-  margin:0;
-  color:black;
-  text-decoration:none;
+	color:black;
+	cursor:pointer;
 }
 .tab li.active {
   border-bottom: 1px solid white;
