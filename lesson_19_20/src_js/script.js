@@ -26,16 +26,16 @@
 	/*accordion------------------------------------------------------------------------------*/
 	
 	$(".banner").accordion(
-		{ 
-			icons: { "header": "icon-accordion", "activeHeader": "icon-accordion-active" },
+		{
+			icons:false,
 			heightStyle: "content",
 			beforeActivate: function (click,ui) {
 				var active = ui.newHeader.index('.banner-header');
 				$('.banner-header')
-				.removeClass('banner-activeHeader');
+				.removeClass('banner--activeHeader');
 				$('.banner-header')
 				.eq(active)
-				.addClass('banner-activeHeader');
+				.addClass('banner--activeHeader');
 			} 
 		}
 	 );

@@ -408,7 +408,7 @@ a.activeTheme {
   position: relative;
   margin: 0 0 5px 0;
   padding: 10px 15px 10px 52px;
-  background-color: #fff;
+  background: url(../img/icon_accordion.png) 0 0 no-repeat #fff;
   border: 1px solid #f6f6f6;
   cursor: pointer;
   font: 13px 'Ubuntu', sans-serif;
@@ -418,31 +418,13 @@ a.activeTheme {
   .banner-header:focus {
     outline: none; }
 
-.banner-activeHeader {
-  background-color: #f4b60d;
+.banner--activeHeader {
+  background: url(../img/icon_accordion.png) 0 -63px no-repeat #f4b60d;
   border: 1px solid #f4b60d;
   color: #fff; }
 
 .banner-content {
   padding: 8px 0 8px 45px; }
-
-.ui-icon {
-  display: block;
-  height: 34px;
-  width: 34px; }
-
-.ui-accordion-header-icon {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 0;
-  padding: 0; }
-
-.icon-accordion {
-  background: url(../img/icon_accordion.png) 0 0 no-repeat; }
-
-.icon-accordion-active {
-  background: url(../img/icon_accordion.png) -34px 0 no-repeat; }
 
 /*------------7.companies-------------------------*/
 .wrCompanies {
