@@ -36,31 +36,11 @@ $(function () {
 	$('.surveyList').append(content);
 	
 	/*---------------CheckQuiz------------------------------------------------------------------------*/
-
 	var listCheckbox = $('input:checkbox');
 	var log = [];
 	var message = '';
 	for (var i = 0; i < survey.length; ++i) { log[i] = false };
 
-	createOverlay();
-	createModal();
-	
-	$(window).resize(function(){alignModal($('.modal'))});
-	
-	listCheckbox.on('click', checkQuiz);
-	
-	$('button').on('click', function (e) {
-		e.preventDefault();
-		createResult();
-		alignModal($('.modal'))
-		$('.overlay, .modal').fadeIn(200);
-	});
-	
-	$('.overlay, .closeModal').on('click', function(){
-		$('.overlay, .modal').fadeOut(200);
-		clearResult();
-	});
-	
 	function checkQuiz() {
 		var userVariant = $(this).closest('li').index() + 1;
 		var currentAnswer = $(this).closest('ul').closest(' li');
@@ -83,6 +63,7 @@ $(function () {
 			listCheckbox.prop('checked', false);
 		}
 	}
+	
 	function createOverlay() { 
 		$('body').append('<div class="overlay"></div>')
 	};
@@ -97,4 +78,24 @@ $(function () {
 			top: ($(window).height() - elem.outerHeight()) / 2 + 'px'
 		})
 	}
+	
+	createOverlay();
+	createModal();
+	
+	$(window).resize(function(){alignModal($('.modal'))});
+	
+	listCheckbox.on('click', checkQuiz);
+	
+	$('button').on('click', function (e) {
+		e.preventDefault();
+		createResult();
+		alignModal($('.modal'))
+		$('.overlay, .modal').fadeIn(200);
+	});
+	
+	$('.overlay, .closeModal').on('click', function(){
+		$('.overlay, .modal').fadeOut(200);
+		clearResult();
+	});
+	
 });
