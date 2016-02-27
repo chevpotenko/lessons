@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson 23-24</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<script data-main="js/app" src="js/require.js"></script>
+</head>
+<body>
+
+	<script type="text/template" id="wrapper">
+		<div class="wrapper">
+			<h2>Tasks</h2>
+			<ol class="list"></ol>
+			<h3>Change Tasks</h3>           
+			<div class="controlls">
+				<input type="text" class="textItem"/>
+				<button class="btn">add</button>
+			</div>
+		</div>
+	</script>
+	
+	<script type="text/template" id="items">
+		<% for(var i=0; i<data.length; i++) { %>
+			<li class="item"><%= data[i] %> <span data-value="<%= data[i] %>" class="btnDelete" title="delete">x</span></li>
+		<% }; %>
+	</script>
+	
+</body>
+</html>
