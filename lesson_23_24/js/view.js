@@ -12,11 +12,10 @@ define(
 				$('body').append(wrapper);
 				
 				self.elements = {
-					textItem: $('.textItem'),
+					item: $('.changeItem'),
 					btn: $('.btn'),
 					list: $('.list'),
 					items: $('#items')
-					
 				}
 				self.renderList(model.data);
 			}
@@ -24,17 +23,17 @@ define(
 			self.renderList = function (data){
 				var tmplList = tmpl(self.elements.items.html(), {data:data});
 				self.elements.list.html(tmplList);
-				self.elements.textItem.val('');
+				self.elements.item.val('');
 			}
 			
-			self.beginEdit = function (contentItem){
+			self.beginEdit = function (item){
 				self.elements.btn.text('edit').addClass('btn--edit');
-				self.elements.textItem.val(contentItem);
+				self.elements.item.val(item);
 			}
 			
-			self.endEdit = function (){
+			self.stopEdit =function (){
 				self.elements.btn.text('add').removeClass('btn--edit');
-				self.elements.textItem.val('');
+				self.elements.item.val('');
 			}
 			
 			init();

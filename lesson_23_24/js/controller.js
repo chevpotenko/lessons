@@ -9,20 +9,20 @@ define(
 			var index;
 			
 			function action(){
-				var contentItem = view.elements.textItem.val();
+				var item = view.elements.item.val();
 				if (view.elements.btn.text()=='add'){
-					model.addItem(contentItem);
-					view.renderList(model.data);
+					model.addItem(item);
 				}
-				if (view.elements.btn.text()=='edit'){
-					if (!contentItem){ 
-						view.endEdit();
+				else
+				{
+					if (!item){
+						view.stopEdit();
 						return
-					};
-					model.editItem(index, contentItem);
-					view.endEdit();
-					view.renderList(model.data);
+					}
+					model.editItem(index, item);
+					view.stopEdit();
 				}
+				view.renderList(model.data);
 			}
 			
 			function deleteItem(e){
@@ -34,8 +34,8 @@ define(
 			
 			function editItem(){
 				index = $(this).index();
-				contentItem =$(this).text().slice(0,-2);
-				view.beginEdit(contentItem);
+				item =$(this).text().slice(0,-2);
+				view.beginEdit(item);
 			}
 			
 			view.elements.btn.on('click', action);
