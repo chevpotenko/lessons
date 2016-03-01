@@ -1,7 +1,7 @@
-﻿'use strict';
+'use strict';
 $(function () {
 	/*---------------Quiz---------------------------------------------------------------------------*/
-	
+
 	var surveyStorage = [
 		{
 			 question: 'Для чего предназначена функция shift()',
@@ -26,15 +26,15 @@ $(function () {
 		}
 	];
 	localStorage.setItem('test', JSON.stringify(surveyStorage));
-	
+
 	/*-------------LocalStorage-----------------------------------------------------------------------*/
-	
+
 	var survey = localStorage.getItem('test');
 	survey = JSON.parse(survey);
 	var templateHtml = $('#template').html();
 	var content = tmpl(templateHtml, { data: survey });
 	$('.surveyList').append(content);
-	
+
 	/*---------------CheckQuiz------------------------------------------------------------------------*/
 	var listCheckbox = $('input:checkbox');
 	var log = [];
@@ -63,8 +63,8 @@ $(function () {
 			listCheckbox.prop('checked', false);
 		}
 	}
-	
-	function createOverlay() { 
+
+	function createOverlay() {
 		$('body').append('<div class="overlay"></div>')
 	};
 
@@ -78,24 +78,24 @@ $(function () {
 			top: ($(window).height() - elem.outerHeight()) / 2 + 'px'
 		})
 	}
-	
+
 	createOverlay();
 	createModal();
-	
+
 	$(window).resize(function(){alignModal($('.modal'))});
-	
+
 	listCheckbox.on('click', checkQuiz);
-	
+
 	$('button').on('click', function (e) {
 		e.preventDefault();
 		createResult();
 		alignModal($('.modal'))
 		$('.overlay, .modal').fadeIn(200);
 	});
-	
+
 	$('.overlay, .closeModal').on('click', function(){
 		$('.overlay, .modal').fadeOut(200);
 		clearResult();
 	});
-	
+
 });
