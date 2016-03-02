@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>lesson 7-8</title>
+	<link href="css/style.min.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+	<div class="box">
+		<div class="pages">
+		<ul class="tab clearfix">
+			<li class="active">Tab 1</li>
+			<li>Tab 2</li>
+			<li>Tab 3</li>
+		</ul>
+		<div class="page">
+			<p>Page 1</p>
+			<form name="form3" action="#" method="get">
+			<fieldset>
+				<legend>Contact information</legend>
+				<div>
+					<label for="firstName" class="fieldName">First name</label>
+					<span class="tooltip" data-title="Enter your first name"><input type="text" name="firstName" id="firstName"/></span>
+				</div>
+				<div>
+					<label for="secondName" class="fieldName">Second name</label>
+					<span class="tooltip" data-title="Enter your second name"><input type="text" name="secondName" id="secondName"/></span>
+				</div>
+				<div>
+					<label for="address" class="fieldName">Address</label>
+					<span class="tooltip" data-title="Enter your address"><input type="text" name="address" id="address"/></span>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+		<div class="page" style="display:none">Page 2</div>
+		<div class="page" style="display:none">Page 3</div>
+		</div>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/*------general-------------------------*/
+body {
+	padding:15px;
+	margin:0;
+}
+.clearfix:after {
+	content:'';
+	display:block;
+	clear:both;
+	height:0px;
+	visibility:hidden
+}
+.box {
+	max-width :550px;
+	margin:0 auto;
+	padding-top:50px;
+}
+
+/*------pageControl-------------------*/
+.pages {
+	height:350px;
+	padding:3px;
+	border:1px solid black;
+}
+.tab {
+	list-style:none;
+	padding:5px 5px 0 5px;
+	margin:0;
+	border:1px solid black;
+	border-radius:5px;
+	background-color:gray;
+}
+.tab li {
+	float:left;
+	display:block;
+	padding: 5px 15px;
+	margin: 0 3px -1px 0;
+	border:1px solid lightgray;
+	border-bottom:1px solid black;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	background-color:lightgray;
+	color:black;
+	cursor:pointer;
+}
+.tab li.active {
+	border-bottom: 1px solid white;
+	background-color: white;
+}
+.tab li:hover {
+	border: 1px solid black;
+	border-bottom: 1px solid white;
+}
+.page {
+	padding:10px;
+}
+
+/*-------tooltip---------------------------*/
+fieldset {
+	padding:10px;
+	border-color:#eee;
+}
+fieldset div {
+	padding: 5px;
+}
+.fieldName {
+	display:inline-block;
+	width:95px;
+}
+.tooltip {
+	position:relative;
+}
+.titleForm:after {
+	content: attr(data-title);
+	position: absolute;
+	display: inline;
+	top: 0;
+	left: 105%;
+	padding: 3px 5px;
+	min-width: 150px;
+	border: 1px solid lightgray;
+	border-radius: 2px;
+	background-color: #eee;
+	font: 12px Arial;
+}

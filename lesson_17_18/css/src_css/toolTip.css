@@ -1,0 +1,28 @@
+/*-------tooltip---------------------------*/
+fieldset {
+	padding:10px;
+	border-color:#eee;
+}
+fieldset div {
+	padding: 5px;
+}
+.fieldName {
+	display:inline-block;
+	width:95px;
+}
+.tooltip {
+	position:relative;
+}
+.titleForm:after {
+	content: attr(data-title);
+	position: absolute;
+	display: inline;
+	top: 0;
+	left: 105%;
+	padding: 3px 5px;
+	min-width: 150px;
+	border: 1px solid lightgray;
+	border-radius: 2px;
+	background-color: #eee;
+	font: 12px Arial;
+}

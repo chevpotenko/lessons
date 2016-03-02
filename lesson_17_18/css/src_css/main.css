@@ -1,0 +1,17 @@
+/*------general-------------------------*/
+body {
+	padding:15px;
+	margin:0;
+}
+.clearfix:after {
+	content:'';
+	display:block;
+	clear:both;
+	height:0px;
+	visibility:hidden
+}
+.box {
+	max-width :550px;
+	margin:0 auto;
+	padding-top:50px;
+}
