@@ -1,9 +1,9 @@
 module.exports=function(grunt){
-	
+
 	require('load-grunt-tasks')(grunt);
-	
+
 	grunt.initConfig({
-		
+
 		babel: {
 			options: {
 				sourceMap: false,
@@ -12,7 +12,7 @@ module.exports=function(grunt){
 			dist: {
 				files: [{
 					expand:true,
-					cwd:'src_js',
+					cwd:'js/src_js',
 					src:['*.js'],
 					dest:'js',
 					ext:'.js',
@@ -22,14 +22,13 @@ module.exports=function(grunt){
 		},
 		watch: {
 			babel: {
-				files: ['src_js/*.js'],
+				files: ['js/src_js/*.js'],
 				tasks: ['babel'],
 			}
 	 }
 	});
-	
+
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.registerTask('default', ['babel']);
-	
 
 };

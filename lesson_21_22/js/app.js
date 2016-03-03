@@ -1,43 +1,56 @@
 'use strict';
 
-function App(name) {
-	/*-------------------init-------------------------------------------*/
+function App(options) {
 
-	var test = document.querySelector('.' + name);
+	var test = document.querySelector('.' + options.name);
+	var overlay = document.querySelector('.' + options.overlay);
+	var modal = document.querySelector('.' + options.modal);
 	var listCheckbox = test.querySelectorAll('input');
-	var log = [];
-	var overlay = undefined;
-	var modal = undefined;
-	var message = '';
-	for (var i = 0; i < quiz.length; ++i) {
-		log[i] = false;
-	};
+	var result = [];
 
-	/*-------------------private methods--------------------------------*/
+	/*-------------------result-----------------------------------------*/
 
-	function checkTest() {
-		var userVariant = [].indexOf.call(this.parentNode.parentNode.children, this.parentNode) + 1;
-		var numberAnswer = [].indexOf.call(this.parentNode.parentNode.parentNode.parentNode.children, this.parentNode.parentNode.parentNode);
-		var inputs = this.parentNode.parentNode.querySelectorAll('input');
-		for (var i = 0; i < inputs.length; ++i) {
-			inputs[i].checked = false;
+	function calcResult() {
+		for (var i = 0; i < quiz.length; ++i) {
+			result[i] = false;
 		};
-		this.checked = true;
-		quiz[numberAnswer - 1].answer == userVariant ? log[numberAnswer - 1] = true : log[numberAnswer - 1] = false;
+		var index = 0;
+		for (var i = 0; i < quiz.length; ++i) {
+			var amountletiant = Object.keys(quiz[i]).length - 2;
+			for (var j = 0; j < amountletiant; ++j) {
+				if (listCheckbox[index].checked) {
+					if (j + 1 == quiz[i].answer) {
+						result[i] = true;
+					};
+				};
+				++index;
+			}
+		}
 	}
 
-	function createResult() {
-		message = '';
+	function conclusion(result) {
+		var correct = 0;
+		result.forEach(function (value, result) {
+			if (value) {
+				++correct;
+			}
+		});
+		return correct = 'Результат: ' + correct + ' / ' + result.length;
+	}
+
+	function createMessage(result) {
+		var message = '';
 		var i = 0;
 		var _iteratorNormalCompletion = true;
 		var _didIteratorError = false;
 		var _iteratorError = undefined;
 
 		try {
-			for (var _iterator = log[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+			for (var _iterator = result[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
 				var value = _step.value;
 
-				value ? message += '<p>' + (i + 1) + ' вопрос - <b>true</b></p>' : message += '<p>' + (i + 1) + ' вопрос - <span>false</span></p>';
+				message += value ? '<p>' + (i + 1) + ' вопрос - <b>true</b></p>' : '<p>' + (i + 1) + ' вопрос - <span>false</span></p>';
+				++i;
 			}
 		} catch (err) {
 			_didIteratorError = true;
@@ -54,50 +67,41 @@ function App(name) {
 			}
 		}
 
-		modal.querySelector('.message').innerHTML = message;
+		return message += '<p class="conclusion">' + conclusion(result) + '</p>';
 	}
 
-	function clearResult() {
+	/*-------------------represent--------------------------------------*/
+
+	function showMessage() {
+		modal.querySelector('.message').innerHTML = createMessage(result);
+	}
+
+	function resetAnswer() {
+		var inputs = this.parentNode.parentNode.querySelectorAll('input');
+		for (var i = 0; i < inputs.length; ++i) {
+			inputs[i].checked = false;
+		};
+		this.checked = true;
+	}
+
+	function resetQuiz() {
 		if (modal.querySelector('input').checked) {
-			message = '';
-			for (var i = 0; i < quiz.length; ++i) {
-				log[i] = false;
-			};
 			for (var i = 0; i < listCheckbox.length; ++i) {
 				listCheckbox[i].checked = false;
 			}
 		}
 	}
 
-	function createModal() {
-		var modal = document.createElement('div');
-		modal.setAttribute('class', 'modal');
-		modal.innerHTML = '<div class="iconModal">X</div><div class="message"></div><label><input type="checkbox"/> очистить</label>';
-		document.querySelector('body').appendChild(modal);
-		return modal;
-	}
-
-	/*-------------------public methods--------------------------------*/
-
-	this.createOverlay = function () {
-		var overlay = document.createElement('div');
-		overlay.setAttribute('class', 'overlay');
-		document.querySelector('body').appendChild(overlay);
-		return overlay;
-	};
-
 	/*-------------------events-----------------------------------------*/
 
-	overlay = this.createOverlay();
-	modal = createModal();
-
 	for (var i = 0; i < listCheckbox.length; ++i) {
-		listCheckbox[i].addEventListener('click', checkTest);
+		listCheckbox[i].addEventListener('click', resetAnswer);
 	}
 
 	test.querySelector('button').addEventListener('click', function (e) {
 		e.preventDefault();
-		createResult();
+		calcResult();
+		showMessage();
 		overlay.classList.toggle('showHide');
 		modal.classList.toggle('showHide');
 	});
@@ -105,12 +109,12 @@ function App(name) {
 	modal.querySelector('.iconModal').addEventListener('click', function () {
 		overlay.classList.toggle('showHide');
 		modal.classList.toggle('showHide');
-		clearResult();
+		resetQuiz();
 	});
 
 	overlay.addEventListener('click', function () {
 		this.classList.toggle('showHide');
 		modal.classList.toggle('showHide');
-		clearResult();
+		resetQuiz();
 	});
 }
