@@ -1,11 +1,11 @@
 requirejs.config({
 	paths:{
-		'jQuery': 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery',
+		'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery',
 		'template':'template'
 	},
 	shim:{
-		'jQuery':{
-			exports: 'jQuery'
+		'jquery':{
+			exports: 'jquery'
 		},
 		'template':{
 			exports:'template'
@@ -13,9 +13,9 @@ requirejs.config({
 	}
 })
 
-require(
+requirejs(
 	[
-	'jQuery',
+	'jquery',
 	'template',
 	'model',
 	'view',
