@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson 23-24 (Angular)</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<script src ="js/app.js"></script>
+	</head>
+	<body ng-app="task">
+		<div class="wrapper" ng-controller=taskController>
+			<h2>Tasks</h2>
+			<ol class="list">
+				<li class="item" ng-repeat = "task in model track by $index">
+					<span ng-click = "select($index)">{{task.title}}</span>
+					<span ng-click = "delete($index)" class="btnDelete">x</span>
+				</li>
+			</ol>
+			<h3>Change Task</h3>
+			<form name="form" class="controlls">
+				<input type="text" name="newItem" value="" class="newItem" ng-model = "itemTitle" required/>
+				<button class="btn" ng-click="edit($index)" edit-task>add</button>
+			</form>
+		</div>
+	</body>
+</html>
