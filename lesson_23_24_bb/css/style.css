@@ -1,0 +1,64 @@
+.wrapper{
+	width:400px;
+	margin:0 auto;
+}
+h2{
+	padding:15px 0;
+	border-bottom:1px solid black;
+}
+h2, h3{
+	font-family: Arial;
+}
+.list{
+	margin:0;
+	padding:0 0 70px 0;
+	list-style-position:inside;
+}
+.item{
+	position:relative;
+	padding:10px 0;
+}
+.title:hover{
+	color:blue;
+	cursor:pointer;
+}
+.title--edit{
+	color: blue;
+}
+.btnDelete{
+	position:absolute;
+	display:block;
+	right:0;
+	top:0;
+	width:20px;
+	padding:8px 0;
+	font-family: Arial;
+	text-align:center;
+	cursor:pointer;
+	border:1px solid transparent;
+}
+.btnDelete:hover{
+	color:red;
+	border:1px solid red;
+	border-radius: 3px;
+}
+.controlls{
+	position:relative;
+	padding:20px 0 0 0;
+	border-top:1px solid black;
+}
+.changeItem{
+	width:75%
+}
+.btn{
+	position:absolute;
+	display:block;
+	right:0;
+	top:20px;
+	width:20%;
+	color:green
+}
+.btn--edit{
+	color: blue;
+	font-weight:bold;
+}

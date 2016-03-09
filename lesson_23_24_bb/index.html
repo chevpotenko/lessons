@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson 23-24 (Backbone)</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<h2>Tasks</h2>
+		<div class="listBox"></div>
+		<h3>Change Task</h3>
+		<div class="controlls">
+			<input type="text" class="changeItem">
+			<button class="btn">add</button>
+		</div>
+	</div>
+
+	<script type="text/template" id="item">
+		<span class="title"><%= title %></span><span class="btnDelete" title="delete">x</span>
+	</script>
+	<script data-main = "js/main" src = "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.22/require.min.js"></script>
+</body>
+</html>
+
