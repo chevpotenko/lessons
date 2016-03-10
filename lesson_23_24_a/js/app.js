@@ -33,6 +33,7 @@ task.controller('taskController', ['$scope', function($scope){
 	$scope.delete = function(index){
 		$scope.model.splice(index, 1);
 		$scope.itemTitle = '';
+		$scope.btnText = firstMode;
 	};
 
 	$scope.select = function(index){
@@ -41,9 +42,9 @@ task.controller('taskController', ['$scope', function($scope){
 		$scope.btnText = secondMode;
 	};
 
-	$scope.$watch('itemTitle', function(){
-		if(!$scope.itemTitle && ($scope.btnText == secondMode)){
+	$scope.change = function() {
+		if($scope.form.$invalid){
 			$scope.btnText = firstMode;
 		}
-	});
+	};
 }]);
