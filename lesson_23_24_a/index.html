@@ -7,19 +7,19 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 		<script src ="js/app.js"></script>
 	</head>
-	<body ng-app="task">
-		<div class="wrapper" ng-controller=taskController>
+	<body data-ng-app="task">
+		<div class="wrapper" data-ng-controller=taskController>
 			<h2>Tasks</h2>
 			<ol class="list">
-				<li class="item" ng-repeat = "task in model track by $index">
-					<span ng-click = "select($index)">{{task.title}}</span>
-					<span ng-click = "delete($index)" class="btnDelete">x</span>
+				<li class="item" data-ng-repeat = "task in model track by $index">
+					<span data-ng-click = "select($index)">{{task.title}}</span>
+					<span data-ng-click = "delete($index)" class="btnDelete">x</span>
 				</li>
 			</ol>
 			<h3>Change Task</h3>
 			<form name="form" class="controlls">
-				<input type="text" name="newItem" value="" class="newItem" ng-model = "itemTitle" required/>
-				<button class="btn" ng-click="edit($index)" edit-task>add</button>
+				<input type="text" name="newItem" value="" class="newItem" data-ng-model = "itemTitle" required/>
+				<button class="btn" data-ng-class="btnText" data-ng-click="edit($index)" edit-task>{{btnText}}</button>
 			</form>
 		</div>
 	</body>
