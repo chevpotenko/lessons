@@ -19,7 +19,7 @@
 			<h3>Change Task</h3>
 			<form name="form" class="controlls">
 				<input type="text" name="newItem" value="" class="newItem" data-ng-change="change()" data-ng-model = "itemTitle" required/>
-				<button class="btn" data-ng-class="btnText" data-ng-click="edit($index)" edit-task>{{btnText}}</button>
+				<button class="btn" data-ng-class="{'btn--edit':!mode}" data-ng-click="edit($index)" edit-task>{{mode?'add':'edit'}}</button>
 			</form>
 		</div>
 	</body>
