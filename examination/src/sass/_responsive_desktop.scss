@@ -1,0 +1,61 @@
+/*--------------------------------------------------*/
+/*----------------responsive desktop----------------*/
+/*--------------------------------------------------*/
+@media screen and (min-width: 940px) {
+	.wrPromo{
+		background: url(../../img/promo.jpg) center center no-repeat;
+	}
+	.promo{
+		background-image: none;
+	}
+	.promo,
+	.howItWorks,
+	.partners,
+	.ideas,
+	.search,
+	.footer{
+		max-width: 940px
+	}
+	/*----------------promo---------------------*/
+	.logo{
+		left:0;
+	}
+	.auth{
+		right: 0;
+	}
+	/*----------------howItWorks----------------*/
+	.sliderNext,
+	.sliderPrev{
+		top:153px;
+	}
+	/*----------------partners------------------*/
+	.partnersGroup{
+		width:100%;
+		padding-bottom: 0;
+	}
+	.partner{
+		width: 21%;
+		margin: 0 2%;
+		padding: 0 0 36px 0;
+	}
+	/*----------------ideas---------------------*/
+	/*----------------search--------------------*/
+	.query{
+		width: 28%;
+	}
+	.btnSubmit{
+		width: 21%;
+		padding: 9px 0;
+	}
+	/*----------------footer--------------------*/
+	.logoFooter{
+		width:26%;
+		padding-left: 0;
+	}
+	.company{
+		width: 17%;
+	}
+	.designed{
+		float: right;
+	}
+}

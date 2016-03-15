@@ -1,0 +1,66 @@
+/*----------------4.ideas----------------------------*/
+.ideas{
+	padding-top: 31px;
+	text-align: center;
+
+	h2{
+		padding: 0 0 15px 0;
+		font-size: 22px;
+		color:#333;
+	}
+}
+.idea{
+	float: left;
+	width: 100%;
+	margin: 0 0 10px 0;
+	height: 120px;
+	border-radius: 3px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+
+	h3{
+		height:100%;
+		width: 80%;
+		padding: 0;
+		margin: 0 auto;
+		font-size: 22px;
+		line-height:120px;
+		color:#fff;
+
+		a{
+			display:inline-block;
+			border-bottom: 3px solid transparent;
+			font-size: 22px;
+			line-height: 22px;
+			text-decoration: none;
+			vertical-align: middle;
+			color: #fff;
+
+			&:hover{
+				border-bottom: 3px solid #fff;
+			}
+		}
+	}
+}
+.idea-bg1{
+	background-image:url(../../img/sport.jpg);
+}
+.idea-bg2{
+	background-image:url(../../img/health.jpg);
+}
+.idea-bg3{
+	background-image:url(../../img/extreme.jpg);
+}
+.idea-bg4{
+	background-image:url(../../img/game.jpg);
+}
+.idea-bg5{
+	background-image:url(../../img/culture.jpg);
+}
+.idea-bg6{
+	background-image:url(../../img/relaxation.jpg);
+}
+.idea-bg7{
+	background-image:url(../../img/travelling.jpg);
+}

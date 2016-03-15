@@ -1,0 +1,46 @@
+/*----------------0.general-------------------------*/
+html ,body{
+	padding:0;
+	margin: 0;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+h1, h2, h3{
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+input:focus{
+	outline: none;
+}
+.promo,
+.howItWorks,
+.partners,
+.ideas,
+.search,
+.footer{
+	max-width: 300px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+
+@import 'promo';
+@import 'howitworks';
+@import 'partners';
+@import 'ideas';
+@import 'search';
+@import 'footer';
+@import 'responsive_tablet';
+@import 'responsive_desktop';
+

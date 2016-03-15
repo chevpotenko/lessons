@@ -1,0 +1,76 @@
+/*------------------1.promo-----------------------*/
+.promo{
+	min-height: 520px;
+	padding-top: 20px;
+	background-image: url(../../img/promo.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -405px 0;
+	text-align: center;
+	color:#fff;
+}
+.header{
+	position: relative;
+	min-height: 202px;
+}
+.auth{
+	padding: 0 0 102px 0;
+
+	a{
+		display: inline-block;
+		padding: 7px 26px;
+		border: 2px solid transparent;
+		border-radius: 16px;
+		font: bold 14px 'Montserrat', sans-serif;
+		text-decoration: none;
+		color:#fff;
+
+		&:hover{
+			border: 2px solid #fff;
+		}
+	}
+}
+.logo{
+	padding: 0;
+
+	a{
+		font-size: 20px;
+		text-decoration: none;
+		color: #fff;
+
+		&:hover{
+			border-bottom: 2px solid #fff;
+		}
+	}
+}
+.find{
+	h2{
+		padding: 0 0 10px 0;
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+	p{
+		margin: 0;
+		padding: 0 0 33px 0;
+		font-size: 18px;
+	}
+}
+.btnFind{
+	display: block;
+	width: 93%;
+	margin: 0 auto;
+	padding: 7px 0;
+	background-color: #ff4e50;
+	border: 2px solid #ff4e50;
+	border-radius: 20px;
+	font: bold 14px 'Montserrat', sans-serif;
+	text-decoration: none;
+	color:#fff;
+	cursor: pointer;
+
+	&:hover{
+		background-color: transparent;
+		border: 2px solid #fff;
+
+	}
+}

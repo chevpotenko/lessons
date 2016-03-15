@@ -1,0 +1,170 @@
+/*--------------------------------------------------*/
+/*----------------responsive tablete----------------*/
+/*--------------------------------------------------*/
+@media screen and (min-width: 770px) {
+	.promo,
+	.howItWorks,
+	.partners,
+	.ideas,
+	.search,
+	.footer{
+		max-width: 750px
+	}
+	/*----------------promo---------------------*/
+	.promo{
+		height: 667px;
+		padding: 35px 10px 0 10px;
+		background-position: -341px 0;
+	}
+	.header{
+		min-height: 180px
+	}
+	.auth{
+		position: absolute;
+		right: 20px;
+		top:0;
+		width: 30%;
+		text-align: right;
+	}
+	.logo{
+		position: absolute;
+		left: 40px;
+		top:0;
+		width: 30%;
+		text-align: left;
+	}
+	.find{
+		h2{
+			padding: 0 0 24px 0;
+			font-size: 52px;
+		}
+		p{
+			font-size: 24px;
+		}
+	}
+	.btnFind{
+		display: inline-block;
+		width: auto;
+		padding: 11px 26px;
+	}
+	/*----------------howItWorks----------------*/
+	.howItWorks{
+		padding-top: 95px;
+		h2{
+			padding: 0 0 35px 0;
+		}
+	}
+	.step{
+		height: 397px;
+		width: 32%;
+		margin: 0;
+	}
+	.step-tab{
+		margin: 0 2%;
+	}
+	.sliderPrev,
+	.sliderNext{
+		display: block;
+	}
+	/*----------------partners------------------*/
+	.partners{
+		width: 72%;
+		padding: 0 5%;
+
+		h2{
+			padding: 97px 0 30px 0;
+		}
+	}
+	.partnersGroup{
+		width: 80%;
+		margin: 0 auto;
+		padding-bottom: 45px
+	}
+	.partner{
+		width: 40%;
+		margin: 0 5%;
+		padding: 0 0 23px 0;
+	}
+	.btnPartners{
+		display: inline-block;
+		width: auto;
+		padding: 10px 31px;
+	}
+	/*----------------ideas---------------------*/
+	.ideas{
+		padding-top: 97px;
+
+		h2{
+			padding: 0 0 33px 0;
+		}
+	}
+	.idea{
+		width: 31%;
+		height: 310px;
+		margin: 0 1% 20px 1%;
+
+		h3{
+			line-height: 310px;
+		}
+	}
+	.idea-double{
+		width: 64%;
+	}
+	/*----------------search--------------------*/
+	.search{
+		padding-top: 75px;
+		padding-bottom: 92px;
+		width: 60%;
+
+		h2{
+			padding-bottom: 20px
+		}
+	}
+	.query,
+	.btnSubmit{
+		display: inline-block;
+	}
+	.queryLabel{
+		padding: 9px 0 38px 0;
+	}
+	.query{
+		width: 43%;
+		margin-right: 2%;
+	}
+	.btnSubmit{
+		width: 30%;
+	}
+	/*----------------footer--------------------*/
+	.footer{
+		padding-top: 35px;
+	}
+	.logoFooter{
+		width: 30%;
+		padding-left: 4%;
+	}
+	.company{
+		width: 23%;
+		padding: 0;
+	}
+	.listCompany{
+		li{
+			display: list-item;
+			padding: 0;
+		}
+	}
+	.partnersFooter{
+		width: 19%;
+	}
+	.designed{
+		width: 20%;
+		text-align: right;
+		p{
+			padding: 0 0 8px 0;
+		}
+	}
+	.logoFooter,
+	.company,
+	.partnersFooter{
+		text-align: left;
+	}
+}

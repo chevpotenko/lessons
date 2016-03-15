@@ -1,0 +1,108 @@
+/*----------------2.howItWorks-------------------------*/
+.howItWorks{
+	padding-top: 33px;
+	padding-bottom: 0;
+
+	h2{
+		padding: 0 0 15px 0;
+		font-size: 22px;
+		text-align: center;
+		color: #333;
+	}
+}
+.step{
+	position: relative;
+	float:left;
+	width: 100%;
+	height: 240px;
+	margin-bottom: 10px;
+}
+.sliderList{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 10000px;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	li{
+		position: relative;
+		float:left;
+		display: block;
+		height: 100%;
+		width: 300px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+}
+.stepContent{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 6% 16px;
+
+	h3{
+		padding: 12px 0;
+		font-size: 24px;
+		color:#fff;
+	}
+	p{
+		margin: 0;
+		padding: 0;
+		font-size: 14px;
+		color:#cccccc;
+	}
+}
+.stepBtn{
+	display: inline-block;
+	padding: 4px 17px;
+	border: 2px solid #ff4e50;
+	border-radius: 10px;
+	background-color:#ff4e50;
+	font: 10px 'Montserrat', sans-serif;
+	text-decoration: none;
+	color:#fff;
+
+	&:hover{
+		background-color: transparent;
+		border: 2px solid #fff;
+		color: #fff;
+	}
+}
+.stepBg1{
+	background-image: url(../../img/step1.jpg);
+}
+.stepBg2{
+	background-image: url(../../img/step2.jpg);
+}
+.stepBg3{
+	background-image: url(../../img/step3.jpg);
+}
+.slider{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.sliderPrev{
+	position: absolute;
+	display: none;
+	top: 40px;
+	left: 20px;
+	width: 30px;
+	height: 55px;
+	background: url(../../img/sprite.png) 0 -182px no-repeat;
+}
+.sliderNext{
+	position: absolute;
+	display:none;
+	top: 40px;
+	right: 20px;
+	width: 30px;
+	height: 55px;
+	background: url(../../img/sprite.png) 0 -245px no-repeat;
+}
