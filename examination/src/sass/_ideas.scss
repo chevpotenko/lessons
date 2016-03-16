@@ -50,7 +50,7 @@
 				bottom: 0;
 				background: #fff;
 				height: 3px;
-				transition-property: left right;
+				transition-property: left, right;
 				transition-duration: 0.3s;
 				transition-timing-function: ease-out;
 			}

@@ -80,7 +80,7 @@ input:focus {
       bottom: 0;
       background: #fff;
       height: 3px;
-      transition-property: left right;
+      transition-property: left, right;
       transition-duration: 0.3s;
       transition-timing-function: ease-out; }
     .logo a:hover:before {
@@ -364,7 +364,7 @@ input:focus {
         bottom: 0;
         background: #fff;
         height: 3px;
-        transition-property: left right;
+        transition-property: left, right;
         transition-duration: 0.3s;
         transition-timing-function: ease-out; }
       .idea h3 a:hover:before {
