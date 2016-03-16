@@ -34,12 +34,31 @@
 	padding: 0;
 
 	a{
+		position: relative;
+		display: inline-block;
 		font-size: 20px;
 		text-decoration: none;
 		color: #fff;
+		-ms-transform: translateX(0);
+		transform: translateX(0);
 
-		&:hover{
-			border-bottom: 2px solid #fff;
+		&:before{
+			content:'';
+			position: absolute;
+			z-index: -1;
+			left: 50%;
+			right:50%;
+			bottom: 0;
+			background: #fff;
+			height: 3px;
+			transition-property: left right;
+			transition-duration: 0.3s;
+			transition-timing-function: ease-out;
+		}
+
+		&:hover:before{
+			left: 0;
+			right: 0;
 		}
 	}
 }
