@@ -1,8 +1,8 @@
-﻿module.exports = function (grunt) {
+module.exports = function (grunt) {
 	grunt.initConfig({
 		concat: {
 			options: {
-				separator: ';' 
+				separator: ';'
 			},
 			dist: {
 				src: ['src_js/*.js'],
@@ -32,7 +32,7 @@
 				tasks: ['sass']
 			}
 		}
-		
+
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');

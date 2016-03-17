@@ -3,8 +3,6 @@
 	padding:63px 0 47px 0;
 	background-color: #f7f7f7;
 }
-
-
 .info{
 	font-size:13px;
 	line-height:20px;
@@ -13,7 +11,7 @@
 .info-category{
 	float:left;
 	width:50%;
-	
+
 	h2{
 		margin:0;
 		padding-bottom:45px;
@@ -25,10 +23,6 @@
 	margin-left:2%;
 	width:48%
 }
-
-
-
-
 .news{
 	padding: 0 20px 27px 0;
 }
@@ -36,7 +30,7 @@
 	position:relative;
 	float:left;
 	width:27%;
-	
+
 	img{
 		width:100%;
 	}
@@ -67,7 +61,7 @@
 }
 .news-text{
 	margin-left:32%;
-	
+
 	h3{
 		margin:0;
 	}
@@ -76,7 +70,7 @@
 	font:16px 'Ubuntu', sans-serif;;
 	color:#2a2d32;
 	text-decoration: none;
-	
+
 	&:hover{
 		color:#0187f4;
 	}
@@ -84,15 +78,11 @@
 .news-details{
 	margin:0;
 	padding:4px 0;
-	
+
 	span{
 		color:#0187f4;
 	}
 }
-
-
-
-
 .banner-header{
 	position:relative;
 	margin:0 0 5px 0;

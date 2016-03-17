@@ -3,19 +3,17 @@
 	background-color:#2a2d32;
 }
 .bottomMenu{
-	padding:61px 0 73px 0; 
+	padding:61px 0 73px 0;
 }
-
-
 .category{
 	float:left;
 	width:21%;
 	margin-left:5%;
-	
+
 	&:first-child{
 		margin-left:0;
 	}
-	
+
 	h4{
 	margin:0;
 	padding:0 0 37px 0;
@@ -23,24 +21,22 @@
 	color:#fff;
 	}
 }
-
-
 .category-list{
 	margin:0;
 	padding:0;
 	list-style:none;
-	
+
 	li{
 		border-bottom:1px solid #2d3035;
 	}
-	
+
 	a{
 		display:block;
 		padding: 9px 0;
 		text-decoration:none;
 		font-size:13px;
 		color:white;
-		
+
 		&:hover{
 			color:#248cec;
 		}

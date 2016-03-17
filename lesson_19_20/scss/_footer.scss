@@ -9,16 +9,13 @@
 	margin:0;
 	padding:0;
 	list-style:none;
-	
+
 	li{
-		display:inline-block;		
+		display:inline-block;
 		margin-right:36px;
 		color:white;
 	}
 }
-
-
-
 .iconFooter{
 	content:'';
 	display:inline-block;
@@ -31,7 +28,7 @@
 	@extend	.iconFooter;
 	background:url(../img/sprite.png) 0 0 no-repeat
 }
-.phone:before{	
+.phone:before{
 	@extend	.iconFooter;
 	background:url(../img/sprite.png) 0 -21px no-repeat
 }
@@ -39,9 +36,6 @@
 	@extend	.iconFooter;
 	background:url(../img/sprite.png) 0 -43px no-repeat
 }
-
-
-
 .copyright{
 	float:right;
 }

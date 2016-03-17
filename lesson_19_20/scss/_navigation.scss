@@ -2,45 +2,39 @@
 .navigation{
 	background-color: #2a2d32;
 }
-
-
-
 .topMenu{
-	margin: 0 300px 0 0;  
+	margin: 0 300px 0 0;
 }
 .topMenu-list{
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	
+
 	li{
 		float: left;
 	}
-	
+
 	a{
 		display: block;
 		padding: 20px 40px;
 		text-decoration: none;
 		font: 14px 'Ubuntu Condensed', sans-serif;
 		color:#fff;
-		
+
 		&:hover{
 			background-color: #248cec;
 		}
 	}
 }
-
-
-
 .form{
 	position: relative;
 	float: right;
 	width: 30%;
 	height: 38px;
-	margin: 8px 8px 0 0; 
+	margin: 8px 8px 0 0;
 	background-color: #35383c;
 	border: 1px solid black;
-	
+
 	[type=text]{
 		display: block;
 		width: 83%;
@@ -52,12 +46,12 @@
 		font-size: 12px;
 		color:#fff;
 	}
-	
+
 	[type=submit]{
 		position: absolute;
 		display: block;
 		right: 0;
-		bottom: 0;		
+		bottom: 0;
 		padding:0;
 		width: 15%;
 		height: 100%;

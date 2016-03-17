@@ -1,4 +1,4 @@
-﻿$(function () {
+$(function () {
 	/*Carousel------------------------------------------------------------------------------*/
 
 	$('.mainTheme')
@@ -13,10 +13,10 @@
 	function init() {
 		var element = $(this);
 		var width = element.innerWidth();
-		if (width > 475) { width = width / 1; };
+		if (width > 475) { width = width / 1 };
 		element.jcarousel('items').css('width', width + 'px');
 	}
- 
+
 	$('.jcarousel-pagination')
 		.on('jcarouselpagination:active', 'a', function () { $(this).addClass('activeTheme'); })
 		.on('jcarouselpagination:inactive', 'a', function () { $(this).removeClass('activeTheme'); })
@@ -24,7 +24,7 @@
 		.on('click', function (e) { e.preventDefault() });
 
 	/*accordion------------------------------------------------------------------------------*/
-	
+
 	$(".banner").accordion(
 		{
 			icons:false,
@@ -36,7 +36,7 @@
 				$('.banner-header')
 				.eq(active)
 				.addClass('banner--activeHeader');
-			} 
+			}
 		}
 	 );
-})
+});

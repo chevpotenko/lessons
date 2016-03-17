@@ -5,7 +5,7 @@
 }
 .boxServices{
 	font-family:'Ubuntu', sans-serif;
-	
+
 	h2{
 		margin:0;
 		padding:20px 0 58px 0;
@@ -13,14 +13,12 @@
 		color:#fff;
 	}
 }
-
-
 .service{
 	float:left;
 	width:22%;
-	margin-left:4%;	
+	margin-left:4%;
 	text-align:center;
-	
+
 	&:first-child{
 		margin-left:0;
 	}
@@ -28,14 +26,14 @@
 .service-img{
 	display:block;
 	position:relative;
-	margin-bottom:33px;	
+	margin-bottom:33px;
 
 	img{
 		display:block;
 		width:100%;
 		height:auto;
 	}
-	
+
 	&:hover:after{
 		content:'+';
 		display:block;
@@ -49,13 +47,13 @@
 		line-height:250px;
 		color:#fff;
 		background:url(../img/service.png) repeat;
-	}		
+	}
 }
 .service-link{
 	font-size:16px;
 	text-decoration:none;
 	color:#fff;
-	
+
 	&:hover{
 	color:#f4b60d;
 	}
