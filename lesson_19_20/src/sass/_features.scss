@@ -47,15 +47,15 @@
 }
 .feature-content--part1:after{
 	@extend .iconFeature;
-	background:url(../img/sprite.png) 0 -92px no-repeat;
+	background:url(../../img/sprite.png) 0 -92px no-repeat;
 }
 .feature-content--part2:after{
 	@extend .iconFeature;
-	background:url(../img/sprite.png) 0 -140px no-repeat;
+	background:url(../../img/sprite.png) 0 -140px no-repeat;
 }
 .feature-content--part3:after{
 	@extend .iconFeature;
-	background:url(../img/sprite.png) 0 -186px no-repeat;
+	background:url(../../img/sprite.png) 0 -186px no-repeat;
 }
 .arrow{
 	font:13px 'Ubuntu', sans-serif;
@@ -68,7 +68,7 @@
 		width:10px;
 		height:9px;
 		margin-left:20px;
-		background-image:url(../img/sprite.png);
+		background-image:url(../../img/sprite.png);
 		background-position:0 -60px;
 	}
 

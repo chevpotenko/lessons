@@ -26,15 +26,15 @@
 }
 .location:before{
 	@extend	.iconFooter;
-	background:url(../img/sprite.png) 0 0 no-repeat
+	background:url(../../img/sprite.png) 0 0 no-repeat
 }
 .phone:before{
 	@extend	.iconFooter;
-	background:url(../img/sprite.png) 0 -21px no-repeat
+	background:url(../../img/sprite.png) 0 -21px no-repeat
 }
 .email:before{
 	@extend	.iconFooter;
-	background:url(../img/sprite.png) 0 -43px no-repeat
+	background:url(../../img/sprite.png) 0 -43px no-repeat
 }
 .copyright{
 	float:right;

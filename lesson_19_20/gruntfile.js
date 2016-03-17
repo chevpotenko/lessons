@@ -5,30 +5,30 @@ module.exports = function (grunt) {
 				separator: ';'
 			},
 			dist: {
-				src: ['src_js/*.js'],
-				dest: 'js/script.js'
+				src: ['src/js/*.js'],
+				dest: 'dist/js/script.js'
 			}
 		},
 		uglify:{
 			dist:{
-				src: ['js/script.js'],
-				dest: 'js/script.js'
+				src: ['dist/js/script.js'],
+				dest: 'dist/js/script.js'
 			}
 		},
 		sass: {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: 'scss',
+					cwd: 'src/sass',
 					src: ['*.scss'],
-					dest: 'css',
+					dest: 'dist/css',
 					ext: '.css'
 				}]
 			}
 		},
 		watch: {
 			sass: {
-				files: ['scss/*.scss'],
+				files: ['src/sass/*.scss'],
 				tasks: ['sass']
 			}
 		}

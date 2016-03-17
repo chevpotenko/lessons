@@ -40,7 +40,7 @@ input:focus {
 .logo-label {
   display: block;
   padding: 0 0 0 13%;
-  background: url(../img/logo.jpg) no-repeat;
+  background: url(../../img/logo.jpg) no-repeat;
   font-family: 'Ubuntu', sans-serif;
   text-decoration: none;
   color: #434343; }
@@ -71,7 +71,7 @@ input:focus {
     display: inline-block;
     width: 19px;
     height: 19px;
-    background-image: url(../img/icon_soc.png);
+    background-image: url(../../img/icon_soc.png);
     background-repeat: no-repeat; }
 
 .facebook {
@@ -148,7 +148,7 @@ input:focus {
     width: 15%;
     height: 100%;
     border: none;
-    background: url(../img/icon_search.png) 50% 50% transparent no-repeat; }
+    background: url(../../img/icon_search.png) 50% 50% transparent no-repeat; }
 
 /*------------3.main theme-------------------------*/
 .wrMainTheme {
@@ -197,7 +197,7 @@ a.activeTheme {
   width: 261px;
   margin: 0;
   padding: 16px 23px;
-  background: url(../img/title.png) repeat; }
+  background: url(../../img/title.png) repeat; }
   .theme-label a {
     text-decoration: none;
     font: 54px/54px 'Ubuntu', sans-serif;
@@ -249,13 +249,13 @@ a.activeTheme {
   height: 32px; }
 
 .feature-content--part1:after {
-  background: url(../img/sprite.png) 0 -92px no-repeat; }
+  background: url(../../img/sprite.png) 0 -92px no-repeat; }
 
 .feature-content--part2:after {
-  background: url(../img/sprite.png) 0 -140px no-repeat; }
+  background: url(../../img/sprite.png) 0 -140px no-repeat; }
 
 .feature-content--part3:after {
-  background: url(../img/sprite.png) 0 -186px no-repeat; }
+  background: url(../../img/sprite.png) 0 -186px no-repeat; }
 
 .arrow {
   font: 13px 'Ubuntu', sans-serif;
@@ -267,7 +267,7 @@ a.activeTheme {
     width: 10px;
     height: 9px;
     margin-left: 20px;
-    background-image: url(../img/sprite.png);
+    background-image: url(../../img/sprite.png);
     background-position: 0 -60px; }
   .arrow:hover {
     color: #248cec; }
@@ -320,7 +320,7 @@ a.activeTheme {
     text-align: center;
     line-height: 250px;
     color: #fff;
-    background: url(../img/service.png) repeat; }
+    background: url(../../img/service.png) repeat; }
 
 .service-link {
   font-size: 16px;
@@ -408,7 +408,7 @@ a.activeTheme {
   position: relative;
   margin: 0 0 5px 0;
   padding: 10px 15px 10px 52px;
-  background: url(../img/icon_accordion.png) 0 0 no-repeat #fff;
+  background: url(../../img/icon_accordion.png) 0 0 no-repeat #fff;
   border: 1px solid #f6f6f6;
   cursor: pointer;
   font: 13px 'Ubuntu', sans-serif;
@@ -419,7 +419,7 @@ a.activeTheme {
     outline: none; }
 
 .banner--activeHeader {
-  background: url(../img/icon_accordion.png) 0 -63px no-repeat #f4b60d;
+  background: url(../../img/icon_accordion.png) 0 -63px no-repeat #f4b60d;
   border: 1px solid #f4b60d;
   color: #fff; }
 
@@ -498,13 +498,13 @@ a.activeTheme {
   vertical-align: middle; }
 
 .location:before {
-  background: url(../img/sprite.png) 0 0 no-repeat; }
+  background: url(../../img/sprite.png) 0 0 no-repeat; }
 
 .phone:before {
-  background: url(../img/sprite.png) 0 -21px no-repeat; }
+  background: url(../../img/sprite.png) 0 -21px no-repeat; }
 
 .email:before {
-  background: url(../img/sprite.png) 0 -43px no-repeat; }
+  background: url(../../img/sprite.png) 0 -43px no-repeat; }
 
 .copyright {
   float: right; }
