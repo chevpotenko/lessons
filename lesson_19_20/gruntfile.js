@@ -5,12 +5,12 @@ module.exports = function (grunt) {
 				separator: ';'
 			},
 			dist: {
-				src: ['src/js/*.js'],
+				src: ['src/js/**/*.js'],
 				dest: 'dist/js/script.js'
 			}
 		},
-		uglify:{
-			dist:{
+		uglify: {
+			dist: {
 				src: ['dist/js/script.js'],
 				dest: 'dist/js/script.js'
 			}
@@ -40,5 +40,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['concat','uglify','sass']);
+	grunt.registerTask('default', ['concat', 'uglify', 'sass']);
 };
