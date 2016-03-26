@@ -1,42 +1,34 @@
-define(
-	'view',
-	[],
-	
-	function(){
-		
-		return function View(model){
-			var self = this;
-			
-			function init(){
-				var wrapper = tmpl($('#wrapper').html());
-				$('body').append(wrapper);
-				
-				self.elements = {
-					item: $('.changeItem'),
-					btn: $('.btn'),
-					list: $('.list'),
-					items: $('#items')
-				}
-				self.renderList(model.data);
-			}
-			
-			self.renderList = function (data){
-				var tmplList = tmpl(self.elements.items.html(), {data:data});
-				self.elements.list.html(tmplList);
-				self.elements.item.val('');
-			}
-			
-			self.beginEdit = function (item){
-				self.elements.btn.text('edit').addClass('btn--edit');
-				self.elements.item.val(item);
-			}
-			
-			self.stopEdit =function (){
-				self.elements.btn.text('add').removeClass('btn--edit');
-				self.elements.item.val('');
-			}
-			
-			init();
-		}
+define(['jquery', 'template'], function($, template) {
+	function View(model) {
+		this.init = function () {
+			var wrapper = tmpl($('#wrapper').html());
+			$('body').append(wrapper);
+			this.elements = {
+				item: $('.changeItem'),
+				btn: $('.btn'),
+				list: $('.list'),
+				items: $('#items')
+			};
+			this.renderList(model.data);
+		};
+
+		this.renderList = function (data) {
+			var tmplList = tmpl(this.elements.items.html(), {data: data});
+			this.elements.list.html(tmplList);
+			this.elements.item.val('');
+		};
+
+		this.beginEdit = function (item) {
+			this.elements.btn.text('edit').addClass('btn--edit');
+			this.elements.item.val(item);
+		};
+
+		this.stopEdit = function () {
+			this.elements.btn.text('add').removeClass('btn--edit');
+			this.elements.item.val('');
+		};
+
+		this.init();
 	}
-);
+	return View;
+});
