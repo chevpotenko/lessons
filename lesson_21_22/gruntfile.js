@@ -11,18 +11,18 @@ module.exports=function(grunt){
 			},
 			dist: {
 				files: [{
-					expand:true,
-					cwd:'js/src_js',
-					src:['*.js'],
-					dest:'js',
-					ext:'.js',
-					extDot:'first'
+					expand: true,
+					cwd: 'src/js',
+					src: ['*.js'],
+					dest: 'dist/js',
+					ext: '.js',
+					extDot: 'first'
 				}]
 			}
 		},
 		watch: {
 			babel: {
-				files: ['js/src_js/*.js'],
+				files: ['src/js/*.js'],
 				tasks: ['babel'],
 			}
 	 }

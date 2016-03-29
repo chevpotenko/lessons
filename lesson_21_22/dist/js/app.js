@@ -13,16 +13,16 @@ function App(options) {
 	function calcResult() {
 		for (var i = 0; i < quiz.length; ++i) {
 			result[i] = false;
-		};
+		}
 		var index = 0;
-		for (var i = 0; i < quiz.length; ++i) {
-			var amountletiant = Object.keys(quiz[i]).length - 2;
+		for (var _i = 0; _i < quiz.length; ++_i) {
+			var amountletiant = Object.keys(quiz[_i]).length - 2;
 			for (var j = 0; j < amountletiant; ++j) {
 				if (listCheckbox[index].checked) {
-					if (j + 1 == quiz[i].answer) {
-						result[i] = true;
-					};
-				};
+					if (j + 1 == quiz[_i].answer) {
+						result[_i] = true;
+					}
+				}
 				++index;
 			}
 		}
@@ -80,7 +80,7 @@ function App(options) {
 		var inputs = this.parentNode.parentNode.querySelectorAll('input');
 		for (var i = 0; i < inputs.length; ++i) {
 			inputs[i].checked = false;
-		};
+		}
 		this.checked = true;
 	}
 

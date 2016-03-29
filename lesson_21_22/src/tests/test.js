@@ -3,13 +3,14 @@ var test = {
 	conclusion : function(result) {
 		var correct = 0;
 		result.forEach(function (value, result) {
-			if (value) {++correct}
-		})
-		return correct = 'Результат: ' + correct + ' / ' +result.length;
+			if (value) {
+				++correct;
+			}
+		});
+		return correct = 'Результат: ' + correct + ' / ' + result.length;
 	},
 
 	createMessage : function (result) {
-
 		var message = '';
 		var i = 0;
 		var _iteratorNormalCompletion = true;
@@ -39,7 +40,6 @@ var test = {
 		}
 		return message += '<p class="conclusion">' + test.conclusion(result) + '</p>';
 	}
-
 }
 
 
