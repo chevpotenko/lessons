@@ -1,7 +1,5 @@
 $(function () {
-
 	/*AJAX----------------------------------------------------------------------------------*/
-
 	function queryIdea() {
 		var form = $('.form');
 		var input = $('.query');
@@ -26,6 +24,7 @@ $(function () {
 		}
 
 		function queryResult(data) {
+			if(!data) {return;}
 			var title = data.images[0].word;
 			for (var i = 0; i < data.images.length; ++i){
 				$(ideasTitle[i]).text(title);
@@ -84,9 +83,7 @@ $(function () {
 		}
 
 		$(window).bind('resize', function(){
-			setTimeout(function(){
-				init();
-			}, 500);
+			setTimeout(function(){ init();}, 500);
 		});
 	}
 
@@ -112,20 +109,26 @@ $(function () {
 		});
 	}
 
-	slider({
-		slider: 'sliderFirst',
-		slidePrev: 'sliderFirstPrev',
-		slideNext: 'sliderFirstNext'
-	});
-	slider({
-		slider: 'sliderSecond',
-		slidePrev: 'sliderSecondPrev',
-		slideNext: 'sliderSecondNext'
-	});
-	slider({
-		slider: 'sliderThird',
-		slidePrev: 'sliderThirdPrev',
-		slideNext: 'sliderThirdNext'
+	var sliders =[
+		{
+			slider: 'sliderFirst',
+			slidePrev: 'sliderFirstPrev',
+			slideNext: 'sliderFirstNext'
+		},
+		{
+			slider: 'sliderSecond',
+			slidePrev: 'sliderSecondPrev',
+			slideNext: 'sliderSecondNext'
+		},
+		{
+			slider: 'sliderThird',
+			slidePrev: 'sliderThirdPrev',
+			slideNext: 'sliderThirdNext'
+		}
+	];
+
+	$.each(sliders, function(index, value){
+		slider(value);
 	});
 
 	$(window).bind('resize', function(){

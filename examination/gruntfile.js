@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target: {
 				files: {
-					'dest/js/script.min.js': ['src/js/script.js']
+					'dist/js/script.min.js': ['src/js/script.js']
 				}
 			}
 		},
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: 'src/sass',
 					src: ['*.scss'],
-					dest: 'src/css',
+					dest: 'dist/css',
 					ext: '.css'
 				}]
 			}
@@ -22,10 +22,10 @@ module.exports = function(grunt) {
 			target: {
 				files: [{
 					expand: true,
-					cwd: 'src/css',
+					cwd: 'dist/css',
 					src: ['*.css', '!*.min.css'],
-					dest: 'dest/css',
-					ext: '.min.css'
+					dest: 'dist/css',
+					ext: '.css'
 				}]
 			}
 		},
@@ -34,6 +34,24 @@ module.exports = function(grunt) {
 				files: ['src/sass/*.scss'],
 				tasks: ['sass']
 			}
+		},
+		processhtml: {
+			dist: {
+				files: {
+					'dist/index.html': ['index.html']
+				}
+			}
+		},
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: {
+					'dist/index.html': 'dist/index.html'
+				}
+			}
 		}
 	});
 
@@ -41,9 +59,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-processhtml');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-
-
-	grunt.registerTask('default', ['uglify', 'sass', 'cssmin']);
-
+	grunt.registerTask('default', ['uglify', 'sass', 'cssmin', 'processhtml', 'htmlmin']);
 };

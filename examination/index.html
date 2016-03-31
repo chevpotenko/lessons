@@ -5,7 +5,11 @@
 	<title>Urlaubsgluck</title>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="dest/css/main.min.css">
+
+	<!-- build:[href] css/ -->
+	<link rel="stylesheet" href="dist/css/main.css">
+	<!-- /build -->
+
 	<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -124,13 +128,13 @@
 					<a class="sliderThirdPrev sliderPrev" href="#"></a>
 					<a class="sliderThirdNext sliderNext" href="#"></a>
 				</div>
-
 			</div>
 		</section>
 	</div>
 	<!--end howItWorks-->
 
 	<!--begin partners-->
+	<!-- build:[src] ../img/ -->
 	<div class="wrPartners">
 		<section class="partners">
 			<h2>Meet a partner for your best holiday</h2>
@@ -167,6 +171,7 @@
 			<a href="#" class="btnPartners">See other partners</a>
 		</section>
 	</div>
+	<!-- /build -->
 	<!--end partners-->
 
 	<!--begin ideas-->
@@ -245,7 +250,9 @@
 			</div>
 			<div class="designed">
 				<p>DESIGNED BY</p>
+				<!-- build:[src] ../img/ -->
 				<img src="img/designed.png" alt="designed" title="designed">
+				<!-- /build -->
 			</div>
 		</footer>
 	</div>
@@ -254,6 +261,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/jcarousel/0.3.4/jquery.jcarousel.min.js"></script>
-	<script src="dest/js/script.min.js"></script>
+	<!-- build:[src] js/ -->
+	<script src="dist/js/script.min.js"></script>
+	<!-- /build -->
 </body>
 </html>
