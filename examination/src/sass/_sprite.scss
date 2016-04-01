@@ -1,0 +1,151 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$arrowleft-name: 'arrowleft';
+$arrowleft-x: 88px;
+$arrowleft-y: 0px;
+$arrowleft-offset-x: -88px;
+$arrowleft-offset-y: 0px;
+$arrowleft-width: 30px;
+$arrowleft-height: 55px;
+$arrowleft-total-width: 151px;
+$arrowleft-total-height: 85px;
+$arrowleft-image: '../img/sprite.png';
+$arrowleft: (88px, 0px, -88px, 0px, 30px, 55px, 151px, 85px, '../img/sprite.png', 'arrowleft', );
+$arrowright-name: 'arrowright';
+$arrowright-x: 121px;
+$arrowright-y: 0px;
+$arrowright-offset-x: -121px;
+$arrowright-offset-y: 0px;
+$arrowright-width: 30px;
+$arrowright-height: 55px;
+$arrowright-total-width: 151px;
+$arrowright-total-height: 85px;
+$arrowright-image: '../img/sprite.png';
+$arrowright: (121px, 0px, -121px, 0px, 30px, 55px, 151px, 85px, '../img/sprite.png', 'arrowright', );
+$game-name: 'game';
+$game-x: 0px;
+$game-y: 0px;
+$game-offset-x: 0px;
+$game-offset-y: 0px;
+$game-width: 41px;
+$game-height: 41px;
+$game-total-width: 151px;
+$game-total-height: 85px;
+$game-image: '../img/sprite.png';
+$game: (0px, 0px, 0px, 0px, 41px, 41px, 151px, 85px, '../img/sprite.png', 'game', );
+$happy-name: 'happy';
+$happy-x: 44px;
+$happy-y: 0px;
+$happy-offset-x: -44px;
+$happy-offset-y: 0px;
+$happy-width: 41px;
+$happy-height: 41px;
+$happy-total-width: 151px;
+$happy-total-height: 85px;
+$happy-image: '../img/sprite.png';
+$happy: (44px, 0px, -44px, 0px, 41px, 41px, 151px, 85px, '../img/sprite.png', 'happy', );
+$nature-name: 'nature';
+$nature-x: 44px;
+$nature-y: 44px;
+$nature-offset-x: -44px;
+$nature-offset-y: -44px;
+$nature-width: 41px;
+$nature-height: 40px;
+$nature-total-width: 151px;
+$nature-total-height: 85px;
+$nature-image: '../img/sprite.png';
+$nature: (44px, 44px, -44px, -44px, 41px, 40px, 151px, 85px, '../img/sprite.png', 'nature', );
+$rest-name: 'rest';
+$rest-x: 0px;
+$rest-y: 44px;
+$rest-offset-x: 0px;
+$rest-offset-y: -44px;
+$rest-width: 41px;
+$rest-height: 41px;
+$rest-total-width: 151px;
+$rest-total-height: 85px;
+$rest-image: '../img/sprite.png';
+$rest: (0px, 44px, 0px, -44px, 41px, 41px, 151px, 85px, '../img/sprite.png', 'rest', );
+$spritesheet-width: 151px;
+$spritesheet-height: 85px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($arrowleft, $arrowright, $game, $happy, $nature, $rest, );
+$spritesheet: (151px, 85px, '../img/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

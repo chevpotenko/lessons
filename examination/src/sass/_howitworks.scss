@@ -73,13 +73,13 @@
 	}
 }
 .stepBg1{
-	background-image: url(../../img/step1.jpg);
+	background-image: url(../img/step1.jpg);
 }
 .stepBg2{
-	background-image: url(../../img/step2.jpg);
+	background-image: url(../img/step2.jpg);
 }
 .stepBg3{
-	background-image: url(../../img/step3.jpg);
+	background-image: url(../img/step3.jpg);
 }
 .slider{
 	position: relative;
@@ -95,7 +95,9 @@
 	left: 20px;
 	width: 30px;
 	height: 55px;
-	background: url(../../img/sprite.png) 0 -182px no-repeat;
+	background-image: url(../img/sprite.png);
+	@include sprite-position($arrowleft);
+	background-repeat: no-repeat;
 }
 .sliderNext{
 	position: absolute;
@@ -104,5 +106,7 @@
 	right: 20px;
 	width: 30px;
 	height: 55px;
-	background: url(../../img/sprite.png) 0 -245px no-repeat;
+	background-image: url(../img/sprite.png);
+	@include sprite-position($arrowright);
+	background-repeat: no-repeat;
 }

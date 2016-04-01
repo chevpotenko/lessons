@@ -38,24 +38,24 @@
 	right: 0;
 	width: 41px;
 	height: 41px;
-	background-image: url(../../img/sprite.png);
+	background-image: url(../img/sprite.png);
 	background-repeat: no-repeat;
 }
 .photo-icon1:after{
 	@include iconPartner;
-	background-position: 0 0;
+	@include sprite-position($rest);
 }
 .photo-icon2:after{
 	@include iconPartner;
-	background-position: 0 -44px;
+	@include sprite-position($happy);
 }
 .photo-icon3:after{
 	@include iconPartner;
-	background-position: 0 -88px;
+	@include sprite-position($nature);
 }
 .photo-icon4:after{
 	@include iconPartner;
-	background-position: 0 -132px;
+	@include sprite-position($game);
 }
 .name{
 	display: inline-block;
