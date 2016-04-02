@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: 'src/sass',
 					src: ['*.scss'],
-					dest: 'dist/css',
+					dest: 'src/css',
 					ext: '.css'
 				}]
 			}
@@ -30,10 +30,10 @@ module.exports = function(grunt) {
 			target: {
 				files: [{
 					expand: true,
-					cwd: 'dist/css',
+					cwd: 'src/css',
 					src: ['*.css', '!*.min.css'],
 					dest: 'dist/css',
-					ext: '.css'
+					ext: '.min.css'
 				}]
 			}
 		},
@@ -75,15 +75,18 @@ module.exports = function(grunt) {
 			}
 		}
 	});
-
+	//min
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-spritesmith');
-	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-processhtml');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	//sass
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	//img
+	grunt.loadNpmTasks('grunt-spritesmith');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-	grunt.registerTask('default', ['uglify', 'sprite', 'sass', 'cssmin', 'processhtml', 'htmlmin', 'imagemin']);
+	grunt.registerTask('min', ['uglify', 'cssmin', 'processhtml', 'htmlmin']);
+	grunt.registerTask('default', ['sprite', 'imagemin', 'sass', 'uglify', 'cssmin', 'processhtml', 'htmlmin']);
 };
